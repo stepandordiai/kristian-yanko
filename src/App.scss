@@ -8,14 +8,13 @@
 }
 
 body {
-	padding: 0 10px 10px 10px;
-	// font-family: "Raleway", sans-serif;
+	padding: 0 30px 30px 30px;
 	font-family: "Urbanist", sans-serif;
 }
 
 .masonry {
-	column-count: 4;
-	gap: 10px;
+	column-count: 3;
+	gap: 30px;
 
 	div {
 		width: 100%;
@@ -24,17 +23,44 @@ body {
 			// TODO:
 			display: block;
 			width: 100%;
-			margin-bottom: 10px;
-			opacity: 0;
-			transform: translateY(25px);
-			animation: animateImg 1s forwards;
+			padding-bottom: 30px;
 		}
 	}
 }
 
-@keyframes animateImg {
-	to {
-		opacity: 1;
-		transform: translateY(0);
+.home-img {
+	opacity: 0;
+	// transform: translateY(25px);
+	transition: all 1s;
+}
+
+.home-img--active {
+	// transform: translateY(0px) !important;
+	opacity: 1 !important;
+}
+
+@media screen and (width <= 1000px) {
+	.masonry {
+		column-count: 2;
+	}
+
+	body {
+		padding: 0 15px 15px 15px;
+		font-family: "Urbanist", sans-serif;
+	}
+
+	.masonry {
+		gap: 15px;
+
+		div {
+			width: 100%;
+
+			img {
+				// TODO:
+				display: block;
+				width: 100%;
+				padding-bottom: 15px;
+			}
+		}
 	}
 }
