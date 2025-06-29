@@ -1,40 +1,26 @@
-import portfolioData from "./data/portfolio-data.json";
-import "./App.scss";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
-import { useEffect } from "react";
+import "./scss/App.scss";
+import { AnimatePresence } from "framer-motion";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
+import ProjectPage from "./pages/ProjectPage/ProjectPage";
 
 function App() {
-	useEffect(() => {
-		document.querySelectorAll(".home-img").forEach((img, index) => {
-			document.addEventListener("scroll", () => {
-				const imgRect = img.getBoundingClientRect();
-				if (imgRect.top < window.innerHeight) {
-					img.classList.add("home-img--active");
-				}
-			});
-			img.addEventListener("load", () => {
-				setTimeout(() => {
-					const imgRect = img.getBoundingClientRect();
-					if (imgRect.top < window.innerHeight) {
-						img.classList.add("home-img--active");
-					}
-				}, 1000);
-			});
-		});
-	}, []);
+	const location = useLocation();
 
 	return (
 		<>
 			<Header />
-			<div className="masonry">
-				{portfolioData.map((project, index) => {
-					return (
-						<div key={index}>
-							<img className="home-img" src={project.img} alt="" />
-						</div>
-					);
-				})}
-			</div>
+			<AnimatePresence mode="wait">
+				<Routes location={location} key={location.pathname}>
+					<Route path="/" element={<Home />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="/project-page/:id" element={<ProjectPage />} />
+				</Routes>
+			</AnimatePresence>
 		</>
 	);
 }

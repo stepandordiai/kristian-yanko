@@ -2,151 +2,51 @@
 	{
 		"id": 1,
 		"name": "Project 1",
-		"img": "1.jpg"
+		"img": "https://cdn.myportfolio.com/ca386bf9-c367-4eb6-b50a-1fc8599cdef7/e1085819-ccd6-4720-b34c-c45925fb48df.jpg?h=15084ff3a6d84ead64600aec210f0cce"
 	},
 	{
-		"id": 1,
+		"id": 2,
 		"name": "Project 1",
-		"img": "2.jpg"
+		"img": "/1.jpg"
 	},
 	{
-		"id": 1,
+		"id": 3,
 		"name": "Project 1",
-		"img": "3.jpg"
+		"img": "/3.jpg"
 	},
 	{
-		"id": 1,
+		"id": 4,
 		"name": "Project 1",
-		"img": "3.jpg"
+		"img": "/3.jpg"
 	},
 	{
-		"id": 1,
+		"id": 5,
 		"name": "Project 1",
-		"img": "1.jpg"
+		"img": "/1.jpg"
 	},
 	{
-		"id": 1,
+		"id": 6,
 		"name": "Project 1",
-		"img": "1.jpg"
+		"img": "/1.jpg"
 	},
 	{
-		"id": 1,
+		"id": 7,
 		"name": "Project 1",
-		"img": "2.jpg"
+		"img": "/2.jpg"
 	},
 	{
-		"id": 1,
+		"id": 8,
 		"name": "Project 1",
-		"img": "1.jpg"
+		"img": "/1.jpg"
 	},
 	{
-		"id": 1,
+		"id": 9,
 		"name": "Project 1",
-		"img": "3.jpg"
+		"img": "/3.jpg"
 	},
 	{
-		"id": 1,
+		"id": 10,
 		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "2.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "2.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "3.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "2.jpg"
-	},
-	{
-		"id": 1,
-		"name": "Project 1",
-		"img": "1.jpg"
+		"img": "/1.jpg"
 	}
 ]

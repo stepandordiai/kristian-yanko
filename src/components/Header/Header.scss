@@ -1,8 +1,9 @@
 .header {
 	height: 80px;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
+	background: #fff;
 }
 
 .header__logo {
@@ -11,4 +12,15 @@
 	justify-content: center;
 	align-items: center;
 	// font-weight: 500;
+}
+
+.header__nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 60px;
+}
+
+.header__nav-link {
+	color: #000;
 }
