@@ -2,51 +2,41 @@
 	{
 		"id": 1,
 		"name": "Project 1",
-		"img": "https://cdn.myportfolio.com/ca386bf9-c367-4eb6-b50a-1fc8599cdef7/e1085819-ccd6-4720-b34c-c45925fb48df.jpg?h=15084ff3a6d84ead64600aec210f0cce"
+		"img": "/01.jpg"
 	},
 	{
 		"id": 2,
 		"name": "Project 1",
-		"img": "/1.jpg"
+		"img": "/02.jpg"
 	},
 	{
 		"id": 3,
 		"name": "Project 1",
-		"img": "/3.jpg"
+		"img": "/03.jpg"
 	},
 	{
 		"id": 4,
 		"name": "Project 1",
-		"img": "/3.jpg"
+		"img": "/04.jpg"
 	},
 	{
 		"id": 5,
 		"name": "Project 1",
-		"img": "/1.jpg"
+		"img": "/05.jpg"
 	},
 	{
 		"id": 6,
 		"name": "Project 1",
-		"img": "/1.jpg"
+		"img": "/06.jpg"
 	},
 	{
 		"id": 7,
 		"name": "Project 1",
-		"img": "/2.jpg"
+		"img": "/07.jpg"
 	},
 	{
 		"id": 8,
 		"name": "Project 1",
-		"img": "/1.jpg"
-	},
-	{
-		"id": 9,
-		"name": "Project 1",
-		"img": "/3.jpg"
-	},
-	{
-		"id": 10,
-		"name": "Project 1",
-		"img": "/1.jpg"
+		"img": "/08.jpg"
 	}
 ]

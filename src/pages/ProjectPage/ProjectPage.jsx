@@ -4,9 +4,9 @@ import portfolioData from "./../../data/portfolio-data.json";
 import { motion } from "framer-motion";
 
 const pageVariants = {
-	initial: { opacity: 0, y: 100 },
-	animate: { opacity: 1, y: 0 },
-	exit: { opacity: 0, y: -100 },
+	initial: { opacity: 0 },
+	animate: { opacity: 1 },
+	exit: { opacity: 0 },
 };
 
 const ProjectPage = () => {

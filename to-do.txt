@@ -1,0 +1,8 @@
+learn about framer-motion
+link to inst
+add lngSelect
+add helmet with canonical and title
+work page
+home will be recent or best work
+custom cursor
+infinite scroller for home and for work masonry on hover stop and nav to project
