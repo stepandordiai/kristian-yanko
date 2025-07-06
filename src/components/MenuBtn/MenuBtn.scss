@@ -1,19 +1,17 @@
 .menu-btn {
-	position: relative;
-	span {
-		font-size: 2rem;
-		position: relative;
-		z-index: 1;
-	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 40px;
 	aspect-ratio: 1/1;
-	display: grid;
-	place-items: center;
 	border-radius: 15px;
-	color: white;
+}
 
-	// color: #fff;
-	// background: rgb(49, 195, 224);
+.menu-btn__icon {
+	font-size: 2rem;
+	transition: all 0.3s;
+}
 
-	// border: 1px solid black;
+.menu-btn__icon--active {
+	transform: rotate(135deg);
 }

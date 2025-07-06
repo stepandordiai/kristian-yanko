@@ -37,7 +37,7 @@ const Home = () => {
 		});
 	});
 	return (
-		<>
+		<div className="home">
 			<motion.div
 				variants={pageVariants}
 				initial="initial"
@@ -58,7 +58,7 @@ const Home = () => {
 					);
 				})}
 			</motion.div>
-		</>
+		</div>
 	);
 };
 

@@ -1,9 +1,21 @@
 .header {
-	min-height: 80px;
+	position: fixed;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-direction: column;
 	background: #fff;
+	z-index: 100;
+	padding: 0 15px;
+}
+
+.header__top {
+	display: flex;
+	width: 100%;
+	min-height: 60px;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .header__logo-link {
@@ -56,6 +68,21 @@
 .link-effect--active::after {
 	transform: scaleX(1);
 	transform-origin: bottom left;
+}
+
+.header__bottom {
+	display: grid;
+	grid-template-rows: 0fr;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+
+	transition: all 0.3s;
+}
+
+.header__bottom--active {
+	padding: 20px 0;
+	grid-template-rows: 1fr;
 }
 
 @media screen and (width <= 896px) {
