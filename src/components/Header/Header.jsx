@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import imgLogo from "/kristian-yanko-logo-v1.png";
 import "./Header.scss";
+import MenuBtn from "../MenuBtn/MenuBtn";
 
 const Header = () => {
 	const inactiveLink = "header__nav-link link-effect";
@@ -50,7 +51,7 @@ const Header = () => {
 			>
 				Instagram
 			</a>
-
+			<MenuBtn />
 			{/* </div> */}
 		</header>
 	);
