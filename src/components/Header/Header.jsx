@@ -40,6 +40,12 @@ const Header = () => {
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+						to={"/work"}
+					>
+						Work
+					</NavLink>
+					<NavLink
+						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to={"/contact"}
 					>
 						Contact
