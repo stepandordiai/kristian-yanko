@@ -25,7 +25,7 @@ const Home = () => {
 					if (imgRect.top < window.innerHeight - 200) {
 						img.classList.add("home-img--active");
 					}
-				}, 1000);
+				}, 500);
 			});
 
 			setTimeout(() => {
@@ -33,7 +33,7 @@ const Home = () => {
 				if (imgRect.top < window.innerHeight - 200) {
 					img.classList.add("home-img--active");
 				}
-			}, 1000);
+			}, 500);
 		});
 	});
 	return (

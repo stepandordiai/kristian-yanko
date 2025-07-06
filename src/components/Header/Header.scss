@@ -1,5 +1,5 @@
 .header {
-	height: 80px;
+	min-height: 80px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -8,8 +8,16 @@
 
 .header__logo-link {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	// justify-content: center;
+	// align-items: center;
+	gap: 5px;
+}
+
+.header__logo-link-img {
+}
+
+.header__logo-link-txt {
+	font-size: 1.5rem;
 }
 
 .header__nav {
@@ -21,4 +29,45 @@
 
 .header__nav-link {
 	color: #000;
+}
+
+.link-effect {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 1px;
+		background: #000;
+		transform: scaleX(0);
+		transform-origin: bottom right;
+		transition: transform 0.3s;
+	}
+
+	&:hover::after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
+}
+
+.link-effect--active::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+@media screen and (width <= 896px) {
+	.header {
+		padding: 0 15px;
+	}
+
+	.header__nav {
+		display: none;
+	}
+
+	.header__link {
+		display: none;
+	}
 }

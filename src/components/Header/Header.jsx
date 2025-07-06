@@ -1,32 +1,57 @@
 import { NavLink } from "react-router-dom";
-import imgLogo from "/kristian-yanko-logo-v1.svg";
+import imgLogo from "/kristian-yanko-logo-v1.png";
 import "./Header.scss";
 
 const Header = () => {
+	const inactiveLink = "header__nav-link link-effect";
+	const activeLink = "header__nav-link link-effect link-effect--active";
+
 	return (
 		<header className="header">
 			<NavLink className="header__logo-link" to={"/"}>
-				<img width={40} src={imgLogo} alt="Kristian Yanko Logo" />
-				<p>
-					<span>Kristian</span>
-					<br />
-					<span>Yanko</span>
-				</p>
+				{/* <img
+					className="header__logo-link-img"
+					width={15}
+					// height={20}
+					src={imgLogo}
+					alt="Kristian Yanko Logo"
+				/> */}
+				<div className="header__logo-link-txt">
+					Kristian Yanko
+					{/* <span>Kristian</span> */}
+					{/* <span>Yanko</span> */}
+				</div>
 			</NavLink>
 			<nav className="header__nav">
-				<NavLink className={"header__nav-link"} to={"/"}>
+				<NavLink
+					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+					to={"/"}
+				>
 					Home
 				</NavLink>
-				<NavLink className={"header__nav-link"} to={"/about"}>
+				<NavLink
+					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+					to={"/about"}
+				>
 					About
 				</NavLink>
-				<NavLink className={"header__nav-link"} to={"/contact"}>
+				<NavLink
+					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+					to={"/contact"}
+				>
 					Contact
 				</NavLink>
 			</nav>
-			<div>
-				<a href="">Instagram</a>
-			</div>
+			{/* <div className="header__right-section"> */}
+			<a
+				className="header__link link-effect"
+				href="https://www.instagram.com/kristian.janko"
+				target="_blank"
+			>
+				Instagram
+			</a>
+
+			{/* </div> */}
 		</header>
 	);
 };
