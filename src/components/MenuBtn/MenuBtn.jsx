@@ -1,4 +1,4 @@
-import Menu from "../Menu/Menu";
+import plusIcon from "/plus.png";
 import "./MenuBtn.scss";
 
 const MenuBtn = () => {
@@ -13,7 +13,7 @@ const MenuBtn = () => {
 
 	return (
 		<div onClick={toggleMenuBtn} className="menu-btn">
-			<span className="menu-btn__icon">+</span>
+			<img className="menu-btn__icon" width={20} src={plusIcon} alt="" />
 		</div>
 	);
 };

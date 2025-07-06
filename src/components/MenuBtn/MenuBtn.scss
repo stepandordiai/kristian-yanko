@@ -1,10 +1,5 @@
 .menu-btn {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 40px;
-	aspect-ratio: 1/1;
-	border-radius: 15px;
+	display: none;
 }
 
 .menu-btn__icon {
@@ -14,4 +9,10 @@
 
 .menu-btn__icon--active {
 	transform: rotate(135deg);
+}
+
+@media screen and (width < 896px) {
+	.menu-btn {
+		display: initial;
+	}
 }
