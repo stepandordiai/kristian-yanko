@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
-import imgLogo from "/kristian-yanko-logo-v1.png";
 import "./Header.scss";
 import MenuBtn from "../MenuBtn/MenuBtn";
 import Menu from "../Menu/Menu";
 
 const Header = () => {
 	const inactiveLink = "header__nav-link link-effect";
-	const activeLink = "header__nav-link link-effect link-effect--active";
+	const activeLink =
+		"header__nav-link header__nav-link--active link-effect link-effect--active";
 
 	return (
 		<header className="header">
