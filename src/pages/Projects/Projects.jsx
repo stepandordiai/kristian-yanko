@@ -1,6 +1,6 @@
-import "./Work.scss";
+import "./Projects.scss";
 import { useEffect } from "react";
-import portfolioData from "./../../data/portfolio-data.json";
+import portfolioData from "../../data/portfolio-data.json";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
@@ -9,7 +9,7 @@ const pageVariants = {
 	animate: { opacity: 1 },
 	exit: { opacity: 0 },
 };
-const Work = () => {
+const Projects = () => {
 	useEffect(() => {
 		document.querySelectorAll(".home-img").forEach((img, index) => {
 			document.addEventListener("scroll", () => {
@@ -62,4 +62,4 @@ const Work = () => {
 	);
 };
 
-export default Work;
+export default Projects;

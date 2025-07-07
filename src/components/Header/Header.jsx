@@ -39,9 +39,9 @@ const Header = () => {
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to={"/work"}
+						to={"/projects"}
 					>
-						Work
+						Projects
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
