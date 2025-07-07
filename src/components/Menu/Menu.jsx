@@ -4,8 +4,7 @@ import { useEffect } from "react";
 
 const Menu = () => {
 	const inactiveLink = "menu__nav-link link-effect";
-	const activeLink =
-		"menu__nav-link menu__nav-link--active link-effect link-effect--active";
+	const activeLink = "menu__nav-link link-effect link-effect--active";
 
 	useEffect(() => {
 		const menuNavLink = document.querySelectorAll(".menu__nav-link");

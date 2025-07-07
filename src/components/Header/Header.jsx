@@ -5,8 +5,7 @@ import Menu from "../Menu/Menu";
 
 const Header = () => {
 	const inactiveLink = "header__nav-link link-effect";
-	const activeLink =
-		"header__nav-link header__nav-link--active link-effect link-effect--active";
+	const activeLink = "header__nav-link link-effect link-effect--active";
 
 	return (
 		<header className="header">

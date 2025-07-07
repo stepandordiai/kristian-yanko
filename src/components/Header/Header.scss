@@ -40,15 +40,7 @@
 }
 
 .header__nav-link {
-	color: rgba(0, 0, 0, 0.5);
-
-	&:hover {
-		color: #000;
-	}
-}
-
-.header__nav-link--active {
-	color: rgb(0, 0, 0);
+	color: #000;
 }
 
 .link-effect {

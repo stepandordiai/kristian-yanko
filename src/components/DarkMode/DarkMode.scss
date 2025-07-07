@@ -1,0 +1,49 @@
+.dark-mode-btn {
+	position: fixed;
+	bottom: 25px;
+	left: 25px;
+	font-size: 1.5rem;
+	color: rgb(0, 0, 0);
+	z-index: 9999;
+}
+
+body.dark .dark-mode-btn {
+	color: #fff;
+}
+
+body.dark {
+	color: #fff !important;
+	background: #000 !important;
+}
+
+body.dark .header {
+	color: #fff;
+	background: #000;
+}
+
+body.dark .header__logo-link-txt {
+	color: #fff;
+}
+
+.light-logo {
+	display: none;
+}
+
+body.dark .light-logo {
+	display: block;
+}
+body.dark .dark-logo {
+	display: none;
+}
+
+body.dark .header__nav-link {
+	color: #ffffff;
+}
+
+body.dark .menu__nav-link {
+	color: #ffffff;
+}
+
+body.dark .link-effect::after {
+	background: #fff !important;
+}

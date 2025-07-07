@@ -7,6 +7,7 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import ProjectPage from "./pages/ProjectPage/ProjectPage";
 import Work from "./pages/Work/Work";
+import DarkMode from "./components/DarkMode/DarkMode";
 
 function App() {
 	const location = useLocation();
@@ -14,6 +15,7 @@ function App() {
 	return (
 		<>
 			<Header />
+			<DarkMode />
 			<AnimatePresence mode="wait">
 				<Routes location={location} key={location.pathname}>
 					<Route path="/" element={<Home />} />
