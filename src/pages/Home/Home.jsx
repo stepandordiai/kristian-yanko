@@ -1,31 +1,37 @@
 import "./Home.scss";
 import portfolioData from "./../../data/portfolio-data.json";
+import { div } from "framer-motion/m";
 
 const Home = () => {
 	return (
 		<div className="home">
-			<p>Home</p>
+			{/* <p>Home</p> */}
 			<div
 				className="slider"
+				// reverse="true"
+				// FIXME:
 				style={{
-					"--width": "300px",
-					"--height": "200px",
-					"--quantity": "3",
+					"--width": "500px",
+					"--height": "400px",
+					"--quantity": "8",
 				}}
 			>
-				{portfolioData.map((project, index) => {
-					return (
-						<img
-							key={index}
-							className="item"
-							// FIXME:
-							style={{ "--position": index + 1 }}
-							src={project.img}
-							alt=""
-							loading="lazy"
-						/>
-					);
-				})}
+				<div className="list">
+					{portfolioData.map((project, index) => {
+						return (
+							<div
+								key={index}
+								className="item"
+								// FIXME:
+								style={{ "--position": index + 1 }}
+							>
+								{/* <a href="" target="_blank"> */}
+								<img src={project.img} alt="" loading="lazy" />
+								{/* </a> */}
+							</div>
+						);
+					})}
+				</div>
 			</div>
 		</div>
 	);
