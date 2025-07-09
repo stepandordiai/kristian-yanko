@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "./DarkMode.scss";
+import "./DarkModeBtn.scss";
 
-const DarkMode = () => {
+const DarkModeBtn = () => {
 	const [darkMode, setDarkMode] = useState(false);
 
 	const toggleDarkMode = () => {
@@ -14,12 +14,10 @@ const DarkMode = () => {
 	}, [darkMode]);
 
 	return (
-		<>
-			<button className="dark-mode-btn" onClick={toggleDarkMode}>
-				{darkMode ? "Dark" : "Light"}
-			</button>
-		</>
+		<button className="dark-mode-btn" onClick={toggleDarkMode}>
+			{darkMode ? "Dark" : "Light"}
+		</button>
 	);
 };
 
-export default DarkMode;
+export default DarkModeBtn;

@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./Header.scss";
 import MenuBtn from "../MenuBtn/MenuBtn";
 import Menu from "../Menu/Menu";
+import DarkModeBtn from "../DarkModeBtn/DarkModeBtn";
 
 const Header = () => {
 	const inactiveLink = "header__nav-link link-effect";
@@ -50,20 +51,21 @@ const Header = () => {
 						Contact
 					</NavLink>
 				</nav>
-				{/* <div className="header__right-section"> */}
-				<a
-					className="header__link link-effect"
-					href="https://www.instagram.com/kristian.janko"
-					target="_blank"
-				>
-					Instagram
-				</a>
-				<MenuBtn />
+				<div className="header__right-section">
+					<DarkModeBtn />
+					<a
+						className="header__link link-effect"
+						href="https://www.instagram.com/kristian.janko"
+						target="_blank"
+					>
+						Instagram
+					</a>
+					<MenuBtn />
+				</div>
 			</div>
 			<div className="header__bottom">
 				<Menu />
 			</div>
-			{/* </div> */}
 		</header>
 	);
 };

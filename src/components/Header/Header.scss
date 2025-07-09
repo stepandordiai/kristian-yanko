@@ -12,6 +12,12 @@
 	padding: 0 30px;
 }
 
+.header__right-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .header__top {
 	display: flex;
 	width: 100%;

@@ -5,7 +5,6 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import ProjectPage from "./pages/ProjectPage/ProjectPage";
-import DarkMode from "./components/DarkMode/DarkMode";
 import Projects from "./pages/Projects/Projects";
 import "./scss/App.scss";
 
@@ -15,7 +14,6 @@ function App() {
 	return (
 		<>
 			<Header />
-			<DarkMode />
 			<AnimatePresence mode="wait">
 				<Routes location={location} key={location.pathname}>
 					<Route path="/" element={<Home />} />
