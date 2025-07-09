@@ -1,36 +1,50 @@
 import "./Home.scss";
 import portfolioData from "./../../data/portfolio-data.json";
-import { div } from "framer-motion/m";
+import { img } from "framer-motion/client";
+import { useEffect } from "react";
 
 const Home = () => {
+	function addAnimation() {
+		const scroller = document.querySelector(".scroller");
+
+		// setAttribute expects both arguments to be strings
+		scroller?.setAttribute("data-animated", "true");
+
+		const scrollerInner = scroller?.querySelector(".scroller__inner");
+		const scrollerContent = Array.from(scrollerInner.children);
+
+		scrollerContent.forEach((item) => {
+			const duplicatedItem = item.cloneNode(true);
+
+			duplicatedItem.setAttribute("aria-hidden", "true");
+			scrollerInner?.appendChild(duplicatedItem);
+		});
+	}
+
+	useEffect(() => {
+		addAnimation();
+	}, []);
 	return (
 		<div className="home">
-			{/* <p>Home</p> */}
 			<div
-				className="slider"
-				// reverse="true"
-				// FIXME:
-				style={{
-					"--width": "500px",
-					"--height": "400px",
-					"--quantity": "8",
-				}}
+				className="home__scroller scroller"
+				data-speed="slow"
+				data-direction="left"
 			>
-				<div className="list">
-					{portfolioData.map((project, index) => {
-						return (
-							<div
-								key={index}
-								className="item"
-								// FIXME:
-								style={{ "--position": index + 1 }}
-							>
-								{/* <a href="" target="_blank"> */}
-								<img src={project.img} alt="" loading="lazy" />
-								{/* </a> */}
-							</div>
-						);
-					})}
+				<div className="scroller__inner">
+					<h1 className="home__title js-home__title">
+						{portfolioData.map((project) => {
+							return (
+								<img
+									style={{ padding: 20 }}
+									width={200}
+									key={project.id}
+									src={project.img}
+									alt=""
+								/>
+							);
+						})}
+					</h1>
 				</div>
 			</div>
 		</div>
