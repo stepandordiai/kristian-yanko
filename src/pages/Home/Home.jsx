@@ -1,6 +1,5 @@
 import "./Home.scss";
-import portfolioData from "./../../data/portfolio-data.json";
-import { img } from "framer-motion/client";
+import portfolioData from "./../../assets/data/portfolio-data.json";
 import { useEffect } from "react";
 
 const Home = () => {

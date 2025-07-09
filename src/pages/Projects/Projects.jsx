@@ -1,6 +1,6 @@
 import "./Projects.scss";
 import { useEffect } from "react";
-import portfolioData from "../../data/portfolio-data.json";
+import portfolioData from "../../assets/data/portfolio-data.json";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 

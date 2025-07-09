@@ -1,6 +1,6 @@
 import "./ProjectPage.scss";
 import { useParams } from "react-router-dom";
-import portfolioData from "./../../data/portfolio-data.json";
+import portfolioData from "./../../assets/data/portfolio-data.json";
 import { motion } from "framer-motion";
 
 const pageVariants = {
