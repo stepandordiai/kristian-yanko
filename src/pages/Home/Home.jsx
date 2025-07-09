@@ -24,29 +24,28 @@ const Home = () => {
 		addAnimation();
 	}, []);
 	return (
-		<div className="home">
-			<div
-				className="home__scroller scroller"
-				data-speed="slow"
-				data-direction="left"
-			>
-				<div className="scroller__inner">
-					<h1 className="home__title js-home__title">
-						{portfolioData.map((project) => {
-							return (
-								<img
-									style={{ padding: 20 }}
-									width={200}
-									key={project.id}
-									src={project.img}
-									alt=""
-								/>
-							);
-						})}
-					</h1>
+		<main className="home">
+			<div className="home__top">
+				<h1>UŽITEČNOST – PEVNOST – KRÁSA V KAŽDÉM DETAILU</h1>
+			</div>
+			<div className="home__bottom">
+				<div
+					className="home__scroller scroller"
+					data-speed="slow"
+					data-direction="left"
+				>
+					<div className="scroller__inner">
+						<div className="home__title js-home__title">
+							{portfolioData.map((project) => {
+								return (
+									<img width={300} key={project.id} src={project.img} alt="" />
+								);
+							})}
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+		</main>
 	);
 };
 
