@@ -8,8 +8,10 @@
 .home__top {
 	height: 50svh;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
+	gap: 30px;
+	flex-direction: column;
 }
 
 .home__bottom {
@@ -52,7 +54,7 @@
 }
 
 .scroller[data-speed="slow"] {
-	--_animation-duration: 20s;
+	--_animation-duration: 30s;
 }
 
 .scroller[data-speed="fast"] {

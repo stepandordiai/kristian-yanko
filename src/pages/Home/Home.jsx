@@ -1,6 +1,14 @@
-import "./Home.scss";
+import { NavLink } from "react-router-dom";
 import portfolioData from "./../../assets/data/portfolio-data.json";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
+import "./Home.scss";
+
+const pageVariants = {
+	initial: { opacity: 0 },
+	animate: { opacity: 1 },
+	exit: { opacity: 0 },
+};
 
 const Home = () => {
 	function addAnimation() {
@@ -24,9 +32,21 @@ const Home = () => {
 		addAnimation();
 	}, []);
 	return (
-		<main className="home">
+		<motion.main
+			className="home"
+			variants={pageVariants}
+			initial="initial"
+			animate="animate"
+			exit="exit"
+			transition={{ duration: 0.5 }}
+		>
 			<div className="home__top">
-				<h1>UŽITEČNOST – PEVNOST – KRÁSA V KAŽDÉM DETAILU</h1>
+				<h1
+					style={{ fontWeight: 600, fontSize: "1.2rem", textAlign: "center" }}
+				>
+					UŽITEČNOST – PEVNOST – KRÁSA V KAŽDÉM DETAILU
+				</h1>
+				<NavLink to={"/projects"}>Hire me</NavLink>
 			</div>
 			<div className="home__bottom">
 				<div
@@ -36,16 +56,27 @@ const Home = () => {
 				>
 					<div className="scroller__inner">
 						<div className="home__title js-home__title">
-							{portfolioData.map((project) => {
+							{portfolioData.slice(0, 8).map((project) => {
 								return (
-									<img width={300} key={project.id} src={project.img} alt="" />
+									<NavLink
+										className={"project__link"}
+										key={project.id}
+										to={`/project-page/${project.id}`}
+									>
+										<img
+											width={300}
+											key={project.id}
+											src={project.img}
+											alt=""
+										/>
+									</NavLink>
 								);
 							})}
 						</div>
 					</div>
 				</div>
 			</div>
-		</main>
+		</motion.main>
 	);
 };
 
