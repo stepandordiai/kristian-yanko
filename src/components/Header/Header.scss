@@ -50,6 +50,14 @@
 	color: #000;
 }
 
+.header__projects-qty {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 0.8rem;
+	transform: translate(125%, -25%);
+}
+
 .link-effect {
 	position: relative;
 

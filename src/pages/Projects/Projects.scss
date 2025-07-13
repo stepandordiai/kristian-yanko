@@ -1,0 +1,9 @@
+.projects {
+	padding: 80px 30px 30px 30px;
+}
+
+@media screen and (width <= 896px) {
+	.projects {
+		padding: 65px 15px 15px 15px;
+	}
+}

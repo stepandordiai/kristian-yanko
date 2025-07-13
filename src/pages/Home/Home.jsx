@@ -64,7 +64,7 @@ const Home = () => {
 										to={`/project-page/${project.id}`}
 									>
 										<img
-											width={300}
+											width={350}
 											key={project.id}
 											src={project.img}
 											alt=""

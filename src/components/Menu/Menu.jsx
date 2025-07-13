@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
-import "./Menu.scss";
 import { useEffect } from "react";
+import projectsData from "./../../assets/data/portfolio-data.json";
+import "./Menu.scss";
 
 const Menu = () => {
 	const inactiveLink = "menu__nav-link link-effect";
@@ -49,7 +50,8 @@ const Menu = () => {
 					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 					to={"/projects"}
 				>
-					Projects
+					<span>Projects</span>
+					<span className="menu__projects-qty">{projectsData.length}</span>
 				</NavLink>
 				<NavLink
 					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}

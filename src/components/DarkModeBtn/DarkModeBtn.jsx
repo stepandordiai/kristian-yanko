@@ -14,7 +14,7 @@ const DarkModeBtn = () => {
 	}, [darkMode]);
 
 	return (
-		<button className="dark-mode-btn" onClick={toggleDarkMode}>
+		<button className="dark-mode-btn link-effect" onClick={toggleDarkMode}>
 			{darkMode ? "Dark" : "Light"}
 		</button>
 	);

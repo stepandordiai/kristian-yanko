@@ -46,3 +46,10 @@ body.dark .menu__nav-link {
 body.dark .link-effect::after {
 	background: #fff !important;
 }
+
+body.dark .dark-mode-btn {
+	color: rgb(255, 255, 255);
+}
+body.dark .header__link {
+	color: #fff;
+}

@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
-import "./Header.scss";
 import MenuBtn from "../MenuBtn/MenuBtn";
 import Menu from "../Menu/Menu";
 import DarkModeBtn from "../DarkModeBtn/DarkModeBtn";
+import projectsData from "./../../assets/data/portfolio-data.json";
+import "./Header.scss";
 
 const Header = () => {
 	const inactiveLink = "header__nav-link link-effect";
@@ -42,7 +43,8 @@ const Header = () => {
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to={"/projects"}
 					>
-						Projects
+						<span>Projects</span>
+						<span className="header__projects-qty">{projectsData.length}</span>
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}

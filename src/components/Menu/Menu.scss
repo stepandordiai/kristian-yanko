@@ -21,3 +21,11 @@
 .menu__nav-link--active {
 	color: #000;
 }
+
+.menu__projects-qty {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(125%, -25%);
+	font-size: 0.8rem;
+}

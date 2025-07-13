@@ -21,6 +21,11 @@
 	height: 50svh;
 }
 
+.home__scroller {
+	transform: rotate(-1deg);
+	margin-bottom: 1rem;
+}
+
 /* Infinite scroller */
 .scroller__inner {
 	flex-wrap: nowrap;

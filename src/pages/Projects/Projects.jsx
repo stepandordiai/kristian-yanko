@@ -36,8 +36,8 @@ const Projects = () => {
 		});
 	});
 	return (
-		<>
-			<div>Work</div>
+		<div className="projects">
+			{/* <div>Work</div> */}
 			<motion.div
 				variants={pageVariants}
 				initial="initial"
@@ -58,7 +58,7 @@ const Projects = () => {
 					);
 				})}
 			</motion.div>
-		</>
+		</div>
 	);
 };
 
