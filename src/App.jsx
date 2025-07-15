@@ -11,14 +11,16 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import ProjectPage from "./pages/ProjectPage/ProjectPage";
 import Projects from "./pages/Projects/Projects";
-import "./scss/App.scss";
 import Footer from "./components/Footer/Footer";
+import ScrollToTop from "./utils/ScrollToTop";
+import "./scss/App.scss";
 
 function App() {
 	const location = useLocation();
 
 	return (
 		<>
+			<ScrollToTop />
 			<Header />
 			<AnimatePresence mode="wait">
 				<Routes location={location} key={location.pathname}>
