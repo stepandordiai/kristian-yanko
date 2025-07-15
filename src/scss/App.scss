@@ -12,12 +12,16 @@
 }
 
 body {
-	// padding: 60px 30px 30px 30px;
 	font-family: "Urbanist", sans-serif;
 }
 
+#root {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
 .masonry {
-	// padding: 30px;
 	column-count: 3;
 	gap: 30px;
 	z-index: -1;

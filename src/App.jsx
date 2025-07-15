@@ -12,6 +12,7 @@ import Contact from "./pages/Contact/Contact";
 import ProjectPage from "./pages/ProjectPage/ProjectPage";
 import Projects from "./pages/Projects/Projects";
 import "./scss/App.scss";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 	const location = useLocation();
@@ -28,6 +29,7 @@ function App() {
 					<Route path="/project-page/:id" element={<ProjectPage />} />
 				</Routes>
 			</AnimatePresence>
+			<Footer />
 		</>
 	);
 }
