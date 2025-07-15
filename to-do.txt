@@ -2,6 +2,7 @@ learn about framer-motion
 add lngSelect
 add helmet with canonical and title
 home will be recent or best work
-custom cursor
 infinite scroller for home and for work masonry on hover stop and nav to project
 learn infinite slider
+add ss
+add sitemap
