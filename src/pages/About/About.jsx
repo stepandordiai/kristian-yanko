@@ -1,9 +1,15 @@
+import { Helmet } from "react-helmet-async";
 import "./About.scss";
 
 const About = () => {
 	return (
 		<>
-			<h1>About</h1>
+			<Helmet>
+				<title>Kristian Yanko | About</title>
+			</Helmet>
+			<main className="about">
+				<h1>About</h1>
+			</main>
 		</>
 	);
 };

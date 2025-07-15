@@ -1,8 +1,9 @@
-import "./Projects.scss";
+import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import portfolioData from "../../assets/data/portfolio-data.json";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import "./Projects.scss";
 
 const pageVariants = {
 	// initial: { opacity: 0, y: 100 },
@@ -36,29 +37,33 @@ const Projects = () => {
 		});
 	});
 	return (
-		<div className="projects">
-			{/* <div>Work</div> */}
-			<motion.div
-				variants={pageVariants}
-				initial="initial"
-				animate="animate"
-				exit="exit"
-				transition={{ duration: 0.5 }}
-				className="masonry"
-			>
-				{portfolioData.map((project, index) => {
-					return (
-						<NavLink
-							className={"project__link"}
-							key={index}
-							to={`/project-page/${project.id}`}
-						>
-							<img className="home-img" src={project.img} alt="" />
-						</NavLink>
-					);
-				})}
-			</motion.div>
-		</div>
+		<>
+			<Helmet>
+				<title>Kristian Yanko | Projects</title>
+			</Helmet>
+			<main className="projects">
+				<motion.div
+					variants={pageVariants}
+					initial="initial"
+					animate="animate"
+					exit="exit"
+					transition={{ duration: 0.5 }}
+					className="masonry"
+				>
+					{portfolioData.map((project, index) => {
+						return (
+							<NavLink
+								className={"project__link"}
+								key={index}
+								to={`/project-page/${project.id}`}
+							>
+								<img className="home-img" src={project.img} alt="" />
+							</NavLink>
+						);
+					})}
+				</motion.div>
+			</main>
+		</>
 	);
 };
 

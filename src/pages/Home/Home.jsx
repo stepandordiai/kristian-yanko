@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { NavLink } from "react-router-dom";
 import portfolioData from "./../../assets/data/portfolio-data.json";
 import { useEffect } from "react";
@@ -60,51 +61,56 @@ const Home = () => {
 		});
 	}, []);
 	return (
-		<motion.main
-			className="home"
-			variants={pageVariants}
-			initial="initial"
-			animate="animate"
-			exit="exit"
-			transition={{ duration: 0.5 }}
-		>
-			<div className="home__top">
-				<h1
-					style={{ fontWeight: 600, fontSize: "1.2rem", textAlign: "center" }}
-				>
-					UŽITEČNOST – PEVNOST – KRÁSA V KAŽDÉM DETAILU
-				</h1>
-				<NavLink to={"/projects"}>Hire me</NavLink>
-			</div>
-			<div className="home__bottom">
-				<div
-					className="home__scroller scroller"
-					data-speed="slow"
-					data-direction="left"
-				>
-					<div className="scroller__inner">
-						{portfolioData.slice(0, 8).map((project) => {
-							return (
-								<NavLink
-									className={"project__link"}
-									key={project.id}
-									to={`/project-page/${project.id}`}
-									style={{ cursor: "none" }}
-								>
-									<img
-										style={{ cursor: "none" }}
-										width={350}
+		<>
+			<Helmet>
+				<title>Kristian Yanko</title>
+			</Helmet>
+			<motion.main
+				className="home"
+				variants={pageVariants}
+				initial="initial"
+				animate="animate"
+				exit="exit"
+				transition={{ duration: 0.5 }}
+			>
+				<div className="home__top">
+					<h1
+						style={{ fontWeight: 600, fontSize: "1.2rem", textAlign: "center" }}
+					>
+						UŽITEČNOST – PEVNOST – KRÁSA V KAŽDÉM DETAILU
+					</h1>
+					<NavLink to={"/projects"}>Hire me</NavLink>
+				</div>
+				<div className="home__bottom">
+					<div
+						className="home__scroller scroller"
+						data-speed="slow"
+						data-direction="left"
+					>
+						<div className="scroller__inner">
+							{portfolioData.slice(0, 8).map((project) => {
+								return (
+									<NavLink
+										className={"project__link"}
 										key={project.id}
-										src={project.img}
-										alt=""
-									/>
-								</NavLink>
-							);
-						})}
+										to={`/project-page/${project.id}`}
+										style={{ cursor: "none" }}
+									>
+										<img
+											style={{ cursor: "none" }}
+											width={350}
+											key={project.id}
+											src={project.img}
+											alt=""
+										/>
+									</NavLink>
+								);
+							})}
+						</div>
 					</div>
 				</div>
-			</div>
-		</motion.main>
+			</motion.main>
+		</>
 	);
 };
 
