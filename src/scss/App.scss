@@ -23,7 +23,9 @@ body {
 	z-index: -1;
 
 	.project__link {
+		position: relative;
 		width: 100%;
+		cursor: none !important;
 
 		img {
 			// TODO:

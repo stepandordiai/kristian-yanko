@@ -21,18 +21,12 @@
 	height: 50svh;
 }
 
-.home__scroller {
-	transform: rotate(-1deg);
-	margin-bottom: 1rem;
-}
-
 /* Infinite scroller */
 .scroller__inner {
 	flex-wrap: nowrap;
 	width: max-content;
 	display: flex;
 	gap: 1rem;
-	// transform: translateX(-50%);
 
 	div {
 		display: flex;
@@ -69,5 +63,36 @@
 @keyframes scroll {
 	to {
 		transform: translate(calc(-50% - 0.5rem));
+	}
+}
+
+.element {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+	width: 0px;
+	aspect-ratio: 1/1;
+	background: #8484841c;
+	color: #000;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	overflow: hidden;
+	transition: all 0.2s ease-out;
+}
+
+.element--active {
+	width: 100px;
+
+	&::before {
+		content: "View";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 }

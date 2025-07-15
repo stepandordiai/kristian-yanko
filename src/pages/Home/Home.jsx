@@ -30,6 +30,34 @@ const Home = () => {
 
 	useEffect(() => {
 		addAnimation();
+
+		const projectLinks = document.querySelectorAll(".project__link");
+		const el = document.createElement("div");
+		document.body.appendChild(el);
+		el.classList.add("element");
+		let mouseX;
+		let mouseY;
+		projectLinks.forEach((link) => {
+			link.addEventListener("mousemove", (e) => {
+				const rect = link.getBoundingClientRect();
+				mouseX = e.clientX;
+				mouseY = e.clientY;
+				el.style.top = mouseY + "px";
+				el.style.left = mouseX + "px";
+				el.classList.add("element--active");
+			});
+
+			link.addEventListener("mouseleave", () => {
+				el.classList.remove("element--active");
+			});
+
+			link.addEventListener("click", () => {
+				el.classList.remove("element--active");
+				setTimeout(() => {
+					el.remove();
+				}, 200);
+			});
+		});
 	}, []);
 	return (
 		<motion.main
@@ -55,24 +83,24 @@ const Home = () => {
 					data-direction="left"
 				>
 					<div className="scroller__inner">
-						<div className="home__title js-home__title">
-							{portfolioData.slice(0, 8).map((project) => {
-								return (
-									<NavLink
-										className={"project__link"}
+						{portfolioData.slice(0, 8).map((project) => {
+							return (
+								<NavLink
+									className={"project__link"}
+									key={project.id}
+									to={`/project-page/${project.id}`}
+									style={{ cursor: "none" }}
+								>
+									<img
+										style={{ cursor: "none" }}
+										width={350}
 										key={project.id}
-										to={`/project-page/${project.id}`}
-									>
-										<img
-											width={350}
-											key={project.id}
-											src={project.img}
-											alt=""
-										/>
-									</NavLink>
-								);
-							})}
-						</div>
+										src={project.img}
+										alt=""
+									/>
+								</NavLink>
+							);
+						})}
 					</div>
 				</div>
 			</div>
