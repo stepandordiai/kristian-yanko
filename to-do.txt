@@ -4,3 +4,4 @@ home will be recent or best work
 infinite scroller for home and for work masonry on hover stop and nav to project
 learn infinite slider
 add sitemap
+update burgerbtn
