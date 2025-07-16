@@ -1,3 +1,4 @@
 add sitemap
 learn about framer-motion
 learn infinite slider
+add filter to projects (family houses - appartments)

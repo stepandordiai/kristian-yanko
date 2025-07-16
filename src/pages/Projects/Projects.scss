@@ -1,9 +1,72 @@
 .projects {
 	padding: 80px 30px 30px 30px;
+	display: flex;
+}
+
+.projects__title-container {
+	width: 100%;
+}
+
+.projects__title {
+	font-size: 2.5rem;
+	position: sticky;
+	top: 80px;
+}
+
+.masonry {
+	width: 100%;
+	column-count: 2;
+	gap: 30px;
+	z-index: -1;
+
+	.project__link {
+		position: relative;
+		width: 100%;
+		cursor: none !important;
+
+		img {
+			// TODO:
+			display: block;
+			width: 100%;
+			padding-bottom: 30px;
+		}
+	}
+}
+
+@media screen and (width <= 1000px) {
+	.masonry {
+		column-count: 1;
+	}
+
+	.masonry {
+		gap: 15px;
+
+		.project__link {
+			width: 100%;
+
+			img {
+				// TODO:
+				display: block;
+				width: 100%;
+				padding-bottom: 15px;
+			}
+		}
+	}
 }
 
 @media screen and (width <= 896px) {
 	.projects {
 		padding: 65px 15px 15px 15px;
+	}
+}
+
+@media screen and (width < 808px) {
+	.projects {
+		flex-direction: column;
+		row-gap: 15px;
+	}
+
+	.masonry {
+		column-count: 2;
 	}
 }
