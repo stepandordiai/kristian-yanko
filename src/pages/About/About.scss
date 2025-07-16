@@ -1,0 +1,26 @@
+.about {
+	min-height: 100vh;
+	padding: 80px 25px 25px 25px;
+	display: flex;
+}
+
+.about__title {
+	font-size: 2.5rem;
+	width: 100%;
+}
+
+.about__container {
+	width: 100%;
+
+	p {
+		text-align: justify;
+	}
+}
+
+@media screen and (width < 808px) {
+	.about {
+		padding: 65px 15px 15px 15px;
+		flex-direction: column;
+		row-gap: 15px;
+	}
+}

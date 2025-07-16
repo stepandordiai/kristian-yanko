@@ -16,7 +16,6 @@ body {
 }
 
 #root {
-	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 }
@@ -60,12 +59,10 @@ a {
 
 	body {
 		padding: 0;
-		// padding-top: 60px;
 		font-family: "Urbanist", sans-serif;
 	}
 
 	.masonry {
-		// padding: 15px;
 		gap: 15px;
 
 		.project__link {
