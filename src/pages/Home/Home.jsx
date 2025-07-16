@@ -32,7 +32,7 @@ const Home = () => {
 	useEffect(() => {
 		addAnimation();
 
-		const projectLinks = document.querySelectorAll(".project__link");
+		const projectLinks = document.querySelectorAll(".home__project-link");
 		const el = document.createElement("div");
 		document.body.appendChild(el);
 		el.classList.add("element");
@@ -91,7 +91,7 @@ const Home = () => {
 							{portfolioData.slice(0, 8).map((project) => {
 								return (
 									<NavLink
-										className={"project__link"}
+										className={"home__project-link"}
 										key={project.id}
 										to={`/project-page/${project.id}`}
 										style={{ cursor: "none" }}

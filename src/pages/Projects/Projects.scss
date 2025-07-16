@@ -17,20 +17,24 @@
 	width: 100%;
 	column-count: 2;
 	gap: 30px;
-	z-index: -1;
+}
 
-	.project__link {
-		position: relative;
+.projects__link {
+	position: relative;
+	width: 100%;
+	opacity: 0;
+	transition: all 1s;
+
+	img {
+		// TODO:
+		display: block;
 		width: 100%;
-		cursor: none !important;
-
-		img {
-			// TODO:
-			display: block;
-			width: 100%;
-			padding-bottom: 30px;
-		}
+		padding-bottom: 30px;
 	}
+}
+
+.projects__link--active {
+	opacity: 1;
 }
 
 @media screen and (width <= 1000px) {
@@ -41,7 +45,7 @@
 	.masonry {
 		gap: 15px;
 
-		.project__link {
+		.projects__link {
 			width: 100%;
 
 			img {

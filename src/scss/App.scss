@@ -20,15 +20,6 @@ body {
 	flex-direction: column;
 }
 
-.home-img {
-	opacity: 0;
-	transition: all 1s;
-}
-
-.home-img--active {
-	opacity: 1 !important;
-}
-
 a {
 	color: #000;
 }

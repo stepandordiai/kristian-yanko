@@ -12,18 +12,18 @@ const pageVariants = {
 };
 const Projects = () => {
 	useEffect(() => {
-		document.querySelectorAll(".home-img").forEach((img, index) => {
+		document.querySelectorAll(".projects__link").forEach((img) => {
 			document.addEventListener("scroll", () => {
 				const imgRect = img.getBoundingClientRect();
 				if (imgRect.top < window.innerHeight) {
-					img.classList.add("home-img--active");
+					img.classList.add("projects__link--active");
 				}
 			});
 			img.addEventListener("load", () => {
 				setTimeout(() => {
 					const imgRect = img.getBoundingClientRect();
 					if (imgRect.top < window.innerHeight) {
-						img.classList.add("home-img--active");
+						img.classList.add("projects__link--active");
 					}
 				}, 500);
 			});
@@ -31,7 +31,7 @@ const Projects = () => {
 			setTimeout(() => {
 				const imgRect = img.getBoundingClientRect();
 				if (imgRect.top < window.innerHeight) {
-					img.classList.add("home-img--active");
+					img.classList.add("projects__link--active");
 				}
 			}, 500);
 		});
@@ -56,11 +56,11 @@ const Projects = () => {
 					{portfolioData.map((project, index) => {
 						return (
 							<NavLink
-								className={"project__link"}
 								key={index}
+								className="projects__link"
 								to={`/project-page/${project.id}`}
 							>
-								<img className="home-img" src={project.img} alt="" />
+								<img src={project.img} alt="" />
 							</NavLink>
 						);
 					})}
