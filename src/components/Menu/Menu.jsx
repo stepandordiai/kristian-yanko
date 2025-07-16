@@ -15,9 +15,9 @@ const Menu = () => {
 				document
 					.querySelector(".header__bottom")
 					.classList.remove("header__bottom--active");
-				document.querySelectorAll(".menu-btn__icon").forEach((icon) => {
-					icon.classList.remove("menu-btn__icon--active");
-				});
+				document
+					.querySelector(".menu-btn")
+					.classList.remove("menu-btn--active");
 			});
 		});
 
@@ -25,9 +25,7 @@ const Menu = () => {
 			document
 				.querySelector(".header__bottom")
 				.classList.remove("header__bottom--active");
-			document.querySelectorAll(".menu-btn__icon").forEach((icon) => {
-				icon.classList.remove("menu-btn__icon--active");
-			});
+			document.querySelector(".menu-btn").classList.remove("menu-btn--active");
 		});
 	}, []);
 

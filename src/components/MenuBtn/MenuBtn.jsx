@@ -1,5 +1,3 @@
-import plusIcon from "/plus.png";
-import plusIconWhite from "/plus-white.png";
 import "./MenuBtn.scss";
 
 const MenuBtn = () => {
@@ -7,27 +5,10 @@ const MenuBtn = () => {
 		document
 			.querySelector(".header__bottom")
 			.classList.toggle("header__bottom--active");
-		document.querySelectorAll(".menu-btn__icon").forEach((icon) => {
-			icon.classList.toggle("menu-btn__icon--active");
-		});
+		document.querySelector(".menu-btn").classList.toggle("menu-btn--active");
 	};
 
-	return (
-		<div onClick={toggleMenuBtn} className="menu-btn">
-			<img
-				className="menu-btn__icon dark-logo"
-				width={20}
-				src={plusIcon}
-				alt=""
-			/>
-			<img
-				className="menu-btn__icon light-logo"
-				width={20}
-				src={plusIconWhite}
-				alt=""
-			/>
-		</div>
-	);
+	return <button onClick={toggleMenuBtn} className="menu-btn"></button>;
 };
 
 export default MenuBtn;

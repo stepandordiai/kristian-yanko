@@ -28,13 +28,6 @@ body.dark .header__logo-link-txt {
 	display: none;
 }
 
-body.dark .light-logo {
-	display: block;
-}
-body.dark .dark-logo {
-	display: none;
-}
-
 body.dark .header__nav-link {
 	color: #ffffff;
 }
@@ -61,4 +54,9 @@ body.dark .element {
 
 body.dark a {
 	color: #fff;
+}
+
+body.dark .menu-btn::before,
+body.dark .menu-btn::after {
+	background: #fff;
 }
