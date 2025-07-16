@@ -1,0 +1,11 @@
+@use "./../../scss/mixins" as *;
+
+.footer {
+	margin-top: auto;
+	@include flex-between-end;
+	padding: 15px;
+}
+
+.footer__right-container {
+	text-align: end;
+}

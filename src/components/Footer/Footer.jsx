@@ -1,4 +1,5 @@
-import styles from "./Footer.module.scss";
+import Lng from "../Lng/Lng";
+import "./Footer.scss";
 
 const Footer = () => {
 	const restoreScrollToTop = () => {
@@ -9,18 +10,21 @@ const Footer = () => {
 	};
 
 	return (
-		<footer className={styles["footer"]}>
-			<p>
-				Site by{" "}
-				<a
-					className="link-effect"
-					href="https://heeeyooo.studio/"
-					target="_blank"
-				>
-					heeeyooo studio
-				</a>
-			</p>
+		<footer className="footer">
 			<div>
+				<Lng />
+				<p>
+					Site by{" "}
+					<a
+						className="link-effect"
+						href="https://heeeyooo.studio/"
+						target="_blank"
+					>
+						heeeyooo studio
+					</a>
+				</p>
+			</div>
+			<div className="footer__right-container">
 				<button onClick={restoreScrollToTop} className="link-effect">
 					Back to top
 				</button>
