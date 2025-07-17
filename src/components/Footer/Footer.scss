@@ -16,12 +16,35 @@
 }
 
 .footer__right-container {
-	text-align: end;
+	display: flex;
+	align-items: flex-end;
+	gap: 15px;
+}
+
+.colon {
+	// TODO:
+	animation: animateColon 1s steps(1, end) infinite;
+}
+
+@keyframes animateColon {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @media screen and (width < 808px) {
 	.footer__left-container {
 		flex-direction: column;
 		align-items: flex-start;
+	}
+
+	.footer__right-container {
+		flex-direction: column;
 	}
 }

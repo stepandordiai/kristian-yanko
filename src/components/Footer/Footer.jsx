@@ -9,6 +9,10 @@ const Footer = () => {
 		});
 	};
 
+	const date = new Date();
+	const hoursNow = date.getHours();
+	const minutesNow = date.getMinutes();
+
 	return (
 		<footer className="footer">
 			<div className="footer__left-container">
@@ -23,7 +27,7 @@ const Footer = () => {
 				</div>
 				<div>
 					<Lng />
-					<p>
+					<p style={{ marginTop: 15 }}>
 						Site by{" "}
 						<a
 							className="link-effect"
@@ -36,10 +40,17 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="footer__right-container">
-				<button onClick={restoreScrollToTop} className="link-effect">
-					Back to top
-				</button>
-				<p>&copy; 2025 Kristian Yanko</p>
+				<div style={{ textAlign: "end" }}>
+					<button onClick={restoreScrollToTop} className="link-effect">
+						Back to top
+					</button>
+					<p style={{ marginTop: 15 }}>&copy; 2025 Kristian Yanko</p>
+				</div>
+				<p>
+					<span>{hoursNow}</span>
+					<span className="colon"> : </span>
+					<span>{minutesNow}</span>
+				</p>
 			</div>
 		</footer>
 	);
