@@ -3,3 +3,15 @@
 	justify-content: space-between;
 	align-items: flex-end;
 }
+
+@mixin flex-end-center {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

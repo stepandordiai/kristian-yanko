@@ -40,7 +40,6 @@ const Home = () => {
 		let mouseY;
 		projectLinks.forEach((link) => {
 			link.addEventListener("mousemove", (e) => {
-				const rect = link.getBoundingClientRect();
 				mouseX = e.clientX;
 				mouseY = e.clientY;
 				el.style.top = mouseY + "px";
@@ -74,12 +73,10 @@ const Home = () => {
 				transition={{ duration: 0.5 }}
 			>
 				<div className="home__top">
-					<h1
-						style={{ fontWeight: 600, fontSize: "1.2rem", textAlign: "center" }}
-					>
-						UŽITEČNOST – PEVNOST – KRÁSA V KAŽDÉM DETAILU
+					<h1 className="home__title">
+						Архітектор житлових будинків - індивідуальні та багатоквартирні
+						проєкти
 					</h1>
-					<NavLink to={"/projects"}>Hire me</NavLink>
 				</div>
 				<div className="home__bottom">
 					<div
@@ -91,14 +88,13 @@ const Home = () => {
 							{portfolioData.slice(0, 8).map((project) => {
 								return (
 									<NavLink
-										className={"home__project-link"}
+										className="home__project-link"
 										key={project.id}
 										to={`/project-page/${project.id}`}
 										style={{ cursor: "none" }}
 									>
 										<img
-											style={{ cursor: "none" }}
-											width={350}
+											className="home__project-img"
 											key={project.id}
 											src={project.img}
 											alt=""

@@ -1,24 +1,32 @@
+@use "./../../scss/mixins" as *;
+
 .home {
 	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
-	height: 100svh;
+	flex-direction: column;
+	row-gap: 30px;
+	min-height: 100svh;
 }
 
 .home__top {
 	height: 50svh;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+	@include flex-end-center;
 	gap: 30px;
 	flex-direction: column;
 }
 
+.home__title {
+	font-size: clamp(1.5rem, 4vw, 2rem);
+	text-align: center;
+	padding: 0 30px;
+}
+
 .home__bottom {
 	display: flex;
-	flex-direction: column;
 	justify-content: flex-end;
-	height: 50svh;
+	flex-direction: column;
+	min-height: 5svh;
+	padding-bottom: 30px;
 }
 
 /* Infinite scroller */
@@ -26,13 +34,15 @@
 	flex-wrap: nowrap;
 	width: max-content;
 	display: flex;
-	gap: 1rem;
+	column-gap: 30px;
+}
 
-	div {
-		display: flex;
-		gap: 1rem;
-		margin-bottom: 1rem;
-	}
+.home__project-link {
+	position: relative;
+}
+
+.home__project-img {
+	width: 500px;
 }
 
 .scroller[data-animated="true"] {
@@ -62,7 +72,7 @@
 
 @keyframes scroll {
 	to {
-		transform: translate(calc(-50% - 0.5rem));
+		transform: translate(calc(-50% - 15px));
 	}
 }
 
@@ -77,22 +87,52 @@
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include flex-center;
 	pointer-events: none;
 	overflow: hidden;
 	transition: all 0.2s ease-out;
 }
 
 .element--active {
-	width: 100px;
+	width: 150px;
 
 	&::before {
-		content: "View";
+		content: "Переглянути";
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+	}
+}
+
+@media screen and (width < 897px) {
+	.home {
+		row-gap: 15px;
+	}
+
+	.home__project-img {
+		width: 250px;
+	}
+
+	.home__top {
+		gap: 15px;
+	}
+
+	.home__title {
+		padding: 0 15px;
+	}
+
+	.home__bottom {
+		padding-bottom: 15px;
+	}
+
+	.scroller__inner {
+		column-gap: 15px;
+	}
+
+	@keyframes scroll {
+		to {
+			transform: translate(calc(-50% - 7.5px));
+		}
 	}
 }
