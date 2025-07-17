@@ -36,26 +36,26 @@ const Menu = () => {
 					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 					to={"/"}
 				>
-					Home
+					Головна
 				</NavLink>
 				<NavLink
 					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 					to={"/about"}
 				>
-					About
+					Про мене
 				</NavLink>
 				<NavLink
 					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 					to={"/projects"}
 				>
-					<span>Projects</span>
+					<span>Проекти</span>
 					<span className="menu__projects-qty">{projectsData.length}</span>
 				</NavLink>
 				<NavLink
 					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 					to={"/contact"}
 				>
-					Contact
+					Контакти
 				</NavLink>
 			</nav>
 		</div>

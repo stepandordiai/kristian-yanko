@@ -50,7 +50,7 @@ const Projects = () => {
 				transition={{ duration: 0.5 }}
 			>
 				<div className="projects__title-container">
-					<h1 className="projects__title">Projects</h1>
+					<h1 className="projects__title">Проекти</h1>
 				</div>
 				<div className="masonry">
 					{portfolioData.map((project, index) => {

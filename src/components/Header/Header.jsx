@@ -13,44 +13,33 @@ const Header = () => {
 		<header className="header">
 			<div className="header__top">
 				<NavLink className="header__logo-link" to={"/"}>
-					{/* <img
-					className="header__logo-link-img"
-					width={15}
-					// height={20}
-					src={imgLogo}
-					alt="Kristian Yanko Logo"
-				/> */}
-					<div className="header__logo-link-txt">
-						Kristian Yanko
-						{/* <span>Kristian</span> */}
-						{/* <span>Yanko</span> */}
-					</div>
+					<div className="header__logo-link-txt">Kristian Yanko</div>
 				</NavLink>
 				<nav className="header__nav">
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to={"/"}
 					>
-						Home
+						Головна
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to={"/about"}
 					>
-						About
+						Про мене
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to={"/projects"}
 					>
-						<span>Projects</span>
+						<span>Проекти</span>
 						<span className="header__projects-qty">{projectsData.length}</span>
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to={"/contact"}
 					>
-						Contact
+						Контакти
 					</NavLink>
 				</nav>
 				<div className="header__right-section">

@@ -26,6 +26,7 @@
 	textarea {
 		border: 1px solid rgba(0, 0, 0, 0.5);
 		padding: 15px;
+		border-radius: inherit;
 	}
 
 	textarea {
@@ -37,6 +38,7 @@
 		padding: 15px;
 		background: #000;
 		color: #fff;
+		font-weight: inherit;
 	}
 }
 

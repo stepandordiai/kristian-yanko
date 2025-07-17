@@ -42,7 +42,7 @@ const Footer = () => {
 			<div className="footer__right-container">
 				<div style={{ textAlign: "end" }}>
 					<button onClick={restoreScrollToTop} className="link-effect">
-						Back to top
+						На початок сторінки
 					</button>
 					<p style={{ marginTop: 15 }}>&copy; 2025 Kristian Yanko</p>
 				</div>
