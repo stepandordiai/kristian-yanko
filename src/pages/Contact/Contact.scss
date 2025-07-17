@@ -6,6 +6,43 @@
 
 .contact__title {
 	font-size: 2.5rem;
-	position: sticky;
-	top: 80px;
+	width: 100%;
+}
+
+.contact__form-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 30px;
+}
+
+.contact__form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+
+	input,
+	textarea {
+		border: 1px solid rgba(0, 0, 0, 0.5);
+		padding: 15px;
+	}
+
+	textarea {
+		outline: none;
+		resize: vertical;
+	}
+
+	button {
+		padding: 15px;
+		background: #000;
+		color: #fff;
+	}
+}
+
+@media screen and (width < 808px) {
+	.contact {
+		padding: 65px 15px 15px 15px;
+		flex-direction: column;
+	}
 }
