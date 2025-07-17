@@ -8,7 +8,7 @@ const Contact = () => {
 				<title>Kristian Yanko | Contact</title>
 			</Helmet>
 			<main className="contact">
-				<h1>Contact</h1>
+				<h1 className="contact__title">Contact</h1>
 			</main>
 		</>
 	);

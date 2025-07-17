@@ -11,18 +11,29 @@ const Footer = () => {
 
 	return (
 		<footer className="footer">
-			<div>
-				<Lng />
-				<p>
-					Site by{" "}
+			<div className="footer__left-container">
+				<div>
 					<a
 						className="link-effect"
-						href="https://heeeyooo.studio/"
+						href="https://www.instagram.com/kristian.janko"
 						target="_blank"
 					>
-						heeeyooo studio
+						Instagram
 					</a>
-				</p>
+				</div>
+				<div>
+					<Lng />
+					<p>
+						Site by{" "}
+						<a
+							className="link-effect"
+							href="https://heeeyooo.studio/"
+							target="_blank"
+						>
+							heeeyooo studio
+						</a>
+					</p>
+				</div>
 			</div>
 			<div className="footer__right-container">
 				<button onClick={restoreScrollToTop} className="link-effect">
