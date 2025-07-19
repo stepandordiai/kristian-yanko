@@ -7,10 +7,30 @@
 	width: 100%;
 }
 
-.projects__title {
-	font-size: 2.5rem;
+.projects__title-inner {
 	position: sticky;
 	top: 80px;
+}
+
+.projects__title {
+	font-size: 2.5rem;
+}
+
+.projects__btn-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	margin-top: 15px;
+}
+
+.projects__btn {
+	padding: 10px;
+	border: 1px solid #fff;
+}
+
+.projects__btn--active {
+	background: #fff;
+	color: #000;
 }
 
 .masonry {

@@ -2,81 +2,97 @@
 	{
 		"id": 1,
 		"name": "Project 1",
-		"img": "/01.jpg"
+		"img": "/01.jpg",
+		"type": "not-family"
 	},
 	{
 		"id": 2,
 		"name": "Project 2",
-		"img": "/02.jpg"
+		"img": "/02.jpg",
+		"type": "not-family"
 	},
 	{
 		"id": 3,
 		"name": "Project 3",
-		"img": "/03.jpg"
+		"img": "/03.jpg",
+		"type": "family"
 	},
 	{
 		"id": 4,
 		"name": "Project 4",
-		"img": "/04.jpg"
+		"img": "/04.jpg",
+		"type": "family"
 	},
 	{
 		"id": 5,
 		"name": "Project 5",
-		"img": "/05.jpg"
+		"img": "/05.jpg",
+		"type": "family"
 	},
 	{
 		"id": 6,
 		"name": "Project 6",
-		"img": "/06.jpg"
+		"img": "/06.jpg",
+		"type": "family"
 	},
 	{
 		"id": 7,
 		"name": "Project 7",
-		"img": "/07.jpg"
+		"img": "/07.jpg",
+		"type": "family"
 	},
 	{
 		"id": 8,
 		"name": "Project 8",
-		"img": "/08.jpg"
+		"img": "/08.jpg",
+		"type": "family"
 	},
 	{
 		"id": 9,
 		"name": "Project 9",
-		"img": "/01.jpg"
+		"img": "/01.jpg",
+		"type": "not-family"
 	},
 	{
 		"id": 10,
 		"name": "Project 10",
-		"img": "/02.jpg"
+		"img": "/02.jpg",
+		"type": "not-family"
 	},
 	{
 		"id": 11,
 		"name": "Project 11",
-		"img": "/03.jpg"
+		"img": "/03.jpg",
+		"type": "family"
 	},
 	{
 		"id": 12,
 		"name": "Project 12",
-		"img": "/04.jpg"
+		"img": "/04.jpg",
+		"type": "family"
 	},
 	{
 		"id": 13,
 		"name": "Project 13",
-		"img": "/05.jpg"
+		"img": "/05.jpg",
+		"type": "family"
 	},
 	{
 		"id": 14,
 		"name": "Project 14",
-		"img": "/06.jpg"
+		"img": "/06.jpg",
+		"type": "family"
 	},
 	{
 		"id": 15,
 		"name": "Project 15",
-		"img": "/07.jpg"
+		"img": "/07.jpg",
+		"type": "family"
 	},
 	{
 		"id": 16,
 		"name": "Project 16",
-		"img": "/08.jpg"
+		"img": "/08.jpg",
+		"type": "family"
 	}
 ]
