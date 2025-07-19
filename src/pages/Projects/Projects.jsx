@@ -4,6 +4,7 @@ import portfolioData from "../../assets/data/portfolio-data.json";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import "./Projects.scss";
+import { a } from "framer-motion/client";
 
 const pageVariants = {
 	initial: { opacity: 0 },
@@ -89,20 +90,34 @@ const Projects = () => {
 						</div>
 					</div>
 				</div>
-				<div className="masonry">
-					{portfolioData
-						.filter((project) => filter === "all" || project.type === filter)
-						.map((project, index) => {
-							return (
-								<NavLink
-									key={index}
-									className="projects__link"
-									to={`/project-page/${project.id}`}
-								>
-									<img src={project.img} alt="" />
-								</NavLink>
-							);
-						})}
+				<div className="projects__mansory-container">
+					<div className="projects__labels-container">
+						{portfolioData
+							.filter((project) => filter === "all" || project.type === filter)
+							.map((project, index) => {
+								return (
+									<a key={index} href={`#${index}`}>
+										<img src={project.img} alt="" />
+									</a>
+								);
+							})}
+					</div>
+					<div className="masonry">
+						{portfolioData
+							.filter((project) => filter === "all" || project.type === filter)
+							.map((project, index) => {
+								return (
+									<NavLink
+										key={index}
+										className="projects__link"
+										id={index}
+										to={`/project-page/${project.id}`}
+									>
+										<img src={project.img} alt="" />
+									</NavLink>
+								);
+							})}
+					</div>
 				</div>
 			</motion.main>
 		</>
