@@ -75,3 +75,12 @@ body.dark button[type="submit"] {
 	background: #fff;
 	color: #000;
 }
+
+body.dark .dark--active {
+	border: 1px solid #fff;
+}
+
+body.dark .projects__btn--active.dark--active {
+	background: #fff;
+	color: #000;
+}

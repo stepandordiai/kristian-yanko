@@ -1,5 +1,5 @@
 .projects {
-	padding: 80px 30px 30px 30px;
+	padding: 65px 15px 15px 15px;
 	display: flex;
 }
 
@@ -25,12 +25,12 @@
 
 .projects__btn {
 	padding: 10px;
-	border: 1px solid #fff;
+	border: 1px solid #000;
 }
 
 .projects__btn--active {
-	background: #fff;
-	color: #000;
+	background: #000000;
+	color: #ffffff;
 }
 
 .projects__mansory-container {
@@ -38,7 +38,6 @@
 	display: flex;
 	gap: 15px;
 	height: 100vh;
-	// overflow-y: scroll;
 }
 
 .projects__labels-container {
@@ -55,15 +54,14 @@
 	width: 80%;
 	display: flex;
 	flex-direction: column;
-	// column-count: 1;
 	gap: 15px;
 	overflow-y: scroll;
 }
 
 .projects__link {
+	scroll-margin-top: 65px;
 	position: relative;
 	width: 100%;
-	opacity: 0;
 	transition: all 1s;
 }
 
@@ -86,7 +84,6 @@
 				// TODO:
 				display: block;
 				width: 100%;
-				// padding-bottom: 15px;
 			}
 		}
 	}

@@ -18,33 +18,33 @@ const Projects = () => {
 		setFilter(props);
 	};
 
-	useEffect(() => {
-		document.querySelectorAll(".projects__link").forEach((img) => {
-			document.addEventListener("scroll", () => {
-				const imgRect = img.getBoundingClientRect();
-				if (imgRect.top < window.innerHeight) {
-					img.classList.add("projects__link--active");
-				}
-			});
-			img.addEventListener("load", () => {
-				setTimeout(() => {
-					const imgRect = img.getBoundingClientRect();
-					if (imgRect.top < window.innerHeight) {
-						img.classList.add("projects__link--active");
-					}
-				}, 500);
-			});
+	// useEffect(() => {
+	// 	document.querySelectorAll(".projects__link").forEach((img) => {
+	// 		document.addEventListener("scroll", () => {
+	// 			const imgRect = img.getBoundingClientRect();
+	// 			if (imgRect.top < window.innerHeight) {
+	// 				img.classList.add("projects__link--active");
+	// 			}
+	// 		});
+	// 		img.addEventListener("load", () => {
+	// 			setTimeout(() => {
+	// 				const imgRect = img.getBoundingClientRect();
+	// 				if (imgRect.top < window.innerHeight) {
+	// 					img.classList.add("projects__link--active");
+	// 				}
+	// 			}, 500);
+	// 		});
 
-			setTimeout(() => {
-				const imgRect = img.getBoundingClientRect();
-				if (imgRect.top < window.innerHeight) {
-					img.classList.add("projects__link--active");
-				}
-			}, 500);
-		});
-	});
-	const inactiveFilterBtn = "projects__btn";
-	const activeFilterBtn = "projects__btn projects__btn--active";
+	// 		setTimeout(() => {
+	// 			const imgRect = img.getBoundingClientRect();
+	// 			if (imgRect.top < window.innerHeight) {
+	// 				img.classList.add("projects__link--active");
+	// 			}
+	// 		}, 500);
+	// 	});
+	// });
+	const inactiveFilterBtn = "projects__btn dark--active";
+	const activeFilterBtn = "projects__btn projects__btn--active dark--active";
 
 	return (
 		<>
@@ -61,7 +61,7 @@ const Projects = () => {
 			>
 				<div className="projects__title-container">
 					<div className="projects__title-inner">
-						<h1 className="projects__title">Проекти</h1>
+						<h1 className="projects__title">Проєкти</h1>
 						<div className="projects__btn-container">
 							<button
 								onClick={() => handleFilterBtn("all")}
@@ -69,7 +69,7 @@ const Projects = () => {
 									filter === "all" ? activeFilterBtn : inactiveFilterBtn
 								}
 							>
-								All projects
+								Всі проєкти
 							</button>
 							<button
 								onClick={() => handleFilterBtn("family")}
@@ -77,7 +77,7 @@ const Projects = () => {
 									filter === "family" ? activeFilterBtn : inactiveFilterBtn
 								}
 							>
-								Family houses
+								Сімейні будинки
 							</button>
 							<button
 								onClick={() => handleFilterBtn("not-family")}
@@ -85,7 +85,7 @@ const Projects = () => {
 									filter === "not-family" ? activeFilterBtn : inactiveFilterBtn
 								}
 							>
-								Not family houses
+								Інші
 							</button>
 						</div>
 					</div>
