@@ -22,7 +22,9 @@ const About = () => {
 				transition={{ duration: 0.5 }}
 				className="about"
 			>
-				<h1 className="about__title">Про мене</h1>
+				<div className="about__title-container">
+					<h1 className="about__title">Про мене</h1>
+				</div>
 				<div className="about__container">
 					<p>
 						Я — архітектор із Чехії, який спеціалізується на проєктуванні

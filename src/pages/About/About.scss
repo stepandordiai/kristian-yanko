@@ -1,12 +1,16 @@
 .about {
 	min-height: 100vh;
-	padding: 80px 25px 25px 25px;
+	padding: 80px 30px 30px 30px;
 	display: flex;
+}
+.about__title-container {
+	width: 100%;
 }
 
 .about__title {
 	font-size: 2.5rem;
-	width: 100%;
+	position: sticky;
+	top: 65px;
 }
 
 .about__container {
@@ -17,9 +21,14 @@
 	}
 }
 
-@media screen and (width < 808px) {
+@media screen and (width <= 1000px) {
 	.about {
 		padding: 65px 15px 15px 15px;
+	}
+}
+
+@media screen and (width < 808px) {
+	.about {
 		flex-direction: column;
 		row-gap: 15px;
 	}
