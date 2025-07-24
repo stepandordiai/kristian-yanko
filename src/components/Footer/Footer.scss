@@ -21,11 +21,6 @@
 	gap: 15px;
 }
 
-.colon {
-	// TODO:
-	animation: animateColon 1s steps(1, end) infinite;
-}
-
 @keyframes animateColon {
 	0% {
 		opacity: 1;

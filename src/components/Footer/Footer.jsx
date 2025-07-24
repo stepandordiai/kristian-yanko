@@ -1,4 +1,6 @@
 import Lng from "../Lng/Lng";
+import dayjs from "dayjs";
+import { useEffect, useState } from "react";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -9,9 +11,24 @@ const Footer = () => {
 		});
 	};
 
-	const date = new Date();
-	const hoursNow = date.getHours();
-	const minutesNow = date.getMinutes();
+	const [time, setTime] = useState("");
+
+	useEffect(() => {
+		const getCurrentTime = () => {
+			const date = dayjs();
+			const hours = String(date.hour()).padStart(2, "0");
+			const minutes = String(date.minute()).padStart(2, "0");
+			const seconds = String(date.second()).padStart(2, "0");
+
+			return `${hours}:${minutes}:${seconds}`;
+		};
+
+		setTime(getCurrentTime());
+
+		const interval = setInterval(() => setTime(getCurrentTime()), 1000);
+
+		return () => clearInterval(interval);
+	}, []);
 
 	return (
 		<footer className="footer">
@@ -40,17 +57,13 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="footer__right-container">
+				<div className="footer__time">{time}</div>
 				<div style={{ textAlign: "end" }}>
 					<button onClick={restoreScrollToTop} className="link-effect">
 						На початок сторінки
 					</button>
 					<p style={{ marginTop: 15 }}>&copy; 2025 Kristian Yanko</p>
 				</div>
-				<p>
-					<span>{hoursNow}</span>
-					<span className="colon"> : </span>
-					<span>{minutesNow}</span>
-				</p>
 			</div>
 		</footer>
 	);
