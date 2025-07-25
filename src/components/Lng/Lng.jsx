@@ -3,7 +3,11 @@ import "./Lng.scss";
 const Lng = () => {
 	return (
 		<div>
-			<button>CZ</button> <button>UA</button>
+			<button className="link-effect">CZ</button>
+			<span> | </span>
+			<button className="lng__btn--active link-effect link-effect--active">
+				UA
+			</button>
 		</div>
 	);
 };
