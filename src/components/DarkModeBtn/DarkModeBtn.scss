@@ -66,10 +66,6 @@ body.dark .footer {
 }
 
 // Contact
-body.dark input,
-body.dark textarea {
-	border: 1px solid rgba(255, 255, 255, 0.5);
-}
 
 body.dark button[type="submit"] {
 	background: #fff;
@@ -86,4 +82,20 @@ body.dark .dark--active {
 
 body.dark .projects__btn--active.dark--active {
 	border-bottom: 1px solid #fff;
+}
+
+body.dark .input {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+	&:focus {
+		border-bottom: 1px solid rgb(255, 255, 255);
+	}
+}
+
+body.dark textarea {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+	&:focus {
+		border-bottom: 1px solid rgb(255, 255, 255);
+	}
 }

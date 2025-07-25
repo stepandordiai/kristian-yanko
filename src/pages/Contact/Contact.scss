@@ -1,37 +1,62 @@
+@use "./../../scss/mixins" as *;
+
 .contact {
 	min-height: 100vh;
 	padding: 80px 30px 30px 30px;
 	display: flex;
 }
 
+.contact__left-container {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
 .contact__title {
 	font-size: 2.5rem;
-	width: 100%;
+}
+
+.contact__details-container {
+	p {
+		color: hsl(0, 0%, 50%);
+	}
+
+	&:nth-last-child(1) {
+		margin-top: auto;
+	}
 }
 
 .contact__form-container {
-	width: 100%;
+	width: 600px;
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
-	padding: 0 30px;
+	row-gap: 30px;
+	height: calc(100svh - 110px);
 }
 
 .contact__form {
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	flex-grow: 1;
+	gap: 30px;
 
-	input,
 	textarea {
-		border: 1px solid rgba(0, 0, 0, 0.5);
-		padding: 15px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		padding-bottom: 15px;
 		border-radius: inherit;
+		width: 100%;
+		height: 100%;
+		transition: all 0.3s;
+
+		&:focus {
+			border-bottom: 1px solid rgba(0, 0, 0, 1);
+		}
 	}
 
 	textarea {
 		outline: none;
-		resize: vertical;
+		resize: none;
 	}
 
 	button {
@@ -42,9 +67,70 @@
 	}
 }
 
+.input-container {
+	position: relative;
+	width: 100%;
+
+	&:focus-within label {
+		transform: translateY(-100%);
+	}
+}
+
+.label {
+	position: absolute;
+	transition: transform 0.3s;
+}
+
+.label--active {
+	transform: translateY(-100%);
+}
+
+.input {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	padding-bottom: 15px;
+	border-radius: inherit;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s;
+
+	&:focus {
+		border-bottom: 1px solid rgba(0, 0, 0, 1);
+	}
+}
+
+.input--active {
+	border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.text-area-container {
+	flex-grow: 1;
+}
+
+.contact__checkbox-wrapper {
+	@include flex-between-center;
+	gap: 5px;
+	flex-wrap: wrap;
+}
+
+.checkbox-container {
+	@include flex-start-center;
+	gap: 5px;
+}
+
+@media screen and (width <= 900px) {
+	.contact {
+		flex-direction: column;
+		row-gap: 15px;
+	}
+
+	.contact__form-container {
+		width: 100%;
+		min-height: calc(100svh - 80px);
+	}
+}
+
 @media screen and (width < 808px) {
 	.contact {
 		padding: 65px 15px 15px 15px;
-		flex-direction: column;
 	}
 }
