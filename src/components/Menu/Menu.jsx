@@ -48,7 +48,7 @@ const Menu = () => {
 					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 					to={"/projects"}
 				>
-					<span>Проекти</span>
+					<span>Проєкти</span>
 					<span className="menu__projects-qty">{projectsData.length}</span>
 				</NavLink>
 				<NavLink

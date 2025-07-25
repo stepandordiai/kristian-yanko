@@ -32,7 +32,7 @@ const Header = () => {
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to={"/projects"}
 					>
-						<span>Проекти</span>
+						<span>Проєкти</span>
 						<span className="header__projects-qty">{projectsData.length}</span>
 					</NavLink>
 					<NavLink

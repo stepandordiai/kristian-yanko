@@ -16,8 +16,8 @@ body.dark {
 
 body.dark .header {
 	color: #fff;
-	background: rgba(0, 0, 0, 0.9);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	background: #000;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 body.dark .header__logo-link-txt {
@@ -62,7 +62,7 @@ body.dark .menu-btn::after {
 }
 
 body.dark .footer {
-	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 // Contact

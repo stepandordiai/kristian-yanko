@@ -1,30 +1,26 @@
+@use "./../../scss/mixins" as *;
+
 .header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	@include flex-between-center;
 	flex-direction: column;
 	background: #fff;
 	z-index: 100;
 	padding: 0 30px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .header__right-section {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include flex-center;
 }
 
 .header__top {
-	display: flex;
 	width: 100%;
 	min-height: 50px;
-	justify-content: space-between;
-	align-items: center;
+	@include flex-between-center;
 }
 
 .header__logo-link {
@@ -32,17 +28,12 @@
 	gap: 5px;
 }
 
-.header__logo-link-img {
-}
-
 .header__logo-link-txt {
 	font-size: 1.5rem;
 }
 
 .header__nav {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include flex-center;
 	gap: 60px;
 }
 
