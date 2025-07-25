@@ -12,7 +12,7 @@ const About = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Kristian Yanko | About me</title>
+				<title>Kristian Yanko | Про мене</title>
 			</Helmet>
 			<motion.main
 				variants={pageVariants}
