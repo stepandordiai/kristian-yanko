@@ -1,5 +1,31 @@
 .project-page {
+	padding: 80px 30px 30px 30px;
 	img {
 		width: 100%;
+	}
+}
+
+.project-page__title {
+	font-size: 3rem;
+	margin-top: 30px;
+}
+
+.project-page__info {
+	text-align: justify;
+	margin-top: 30px;
+}
+
+@media screen and (width <= 896px) {
+	.project-page {
+		padding: 65px 15px 15px 15px;
+	}
+
+	.project-page__title {
+		font-size: 2rem;
+		margin-top: 15px;
+	}
+
+	.project-page__info {
+		margin-top: 15px;
 	}
 }
