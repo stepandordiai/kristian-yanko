@@ -67,11 +67,7 @@
 	scroll-margin-top: 65px;
 	position: relative;
 	width: 100%;
-	transition: all 1s;
-}
-
-.projects__link--active {
-	opacity: 1;
+	cursor: none;
 }
 
 @media screen and (width <= 1000px) {

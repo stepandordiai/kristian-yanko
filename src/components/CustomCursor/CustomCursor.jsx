@@ -1,8 +1,11 @@
 import { useEffect } from "react";
+import isTouchDevice from "../../utils/isTouchDevice";
 import "./CustomCursor.scss";
 
 const CustomCursor = () => {
 	useEffect(() => {
+		if (isTouchDevice()) return;
+
 		const customCursor = document.querySelector(".custom-cursor");
 
 		const handleMouseMove = (e) => {

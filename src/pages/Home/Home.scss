@@ -72,6 +72,10 @@
 	}
 }
 
+.home__project-link {
+	cursor: none;
+}
+
 @media screen and (width < 897px) {
 	.home {
 		row-gap: 15px;
