@@ -32,18 +32,17 @@ const Home = () => {
 	useEffect(() => {
 		addAnimation();
 
-		let mouseX;
-		let mouseY;
-
 		const el = document.createElement("div");
 		el.classList.add("element");
-		document.body.appendChild(el);
+		if (!document.body.contains(el)) {
+			document.body.appendChild(el);
+		}
 
 		const projectLinks = document.querySelectorAll(".home__project-link");
 
 		const handleMouseMove = (e) => {
-			mouseX = e.clientX;
-			mouseY = e.clientY;
+			let mouseX = e.clientX;
+			let mouseY = e.clientY;
 
 			el.style.top = mouseY + "px";
 			el.style.left = mouseX + "px";
@@ -69,10 +68,11 @@ const Home = () => {
 
 		return () => {
 			projectLinks.forEach((link) => {
-				link.addEventListener("mousemove", handleMouseMove);
-				link.addEventListener("mouseleave", handleMouseLeave);
-				link.addEventListener("click", handleClick);
+				link.removeEventListener("mousemove", handleMouseMove);
+				link.removeEventListener("mouseleave", handleMouseLeave);
+				link.removeEventListener("click", handleClick);
 			});
+			el.remove();
 		};
 	}, []);
 	return (

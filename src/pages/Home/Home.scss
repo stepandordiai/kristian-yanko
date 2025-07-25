@@ -37,10 +37,6 @@
 	column-gap: 30px;
 }
 
-.home__project-link {
-	position: relative;
-}
-
 .home__project-img {
 	width: 500px;
 }
@@ -77,7 +73,7 @@
 }
 
 .element {
-	position: absolute;
+	position: fixed;
 	transform: translate(-50%, -50%);
 	z-index: 9999;
 	width: 0px;
