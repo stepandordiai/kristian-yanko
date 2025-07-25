@@ -79,9 +79,8 @@
 
 			img {
 				// TODO:
-				// display: block;
+				display: block;
 				width: 100%;
-				// pointer-events: none;
 			}
 		}
 	}
@@ -98,6 +97,10 @@
 		display: flex;
 		gap: 10px;
 		height: auto;
+	}
+
+	.projects__title-inner {
+		top: 65px;
 	}
 
 	.projects__labels-container {
