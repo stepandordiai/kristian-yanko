@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { activeCursor, inactiveCursor } from "../../utils/cursorState";
 import "./Projects.scss";
+import { div } from "framer-motion/client";
 
 const pageVariants = {
 	initial: { opacity: 0 },
@@ -80,13 +81,14 @@ const Projects = () => {
 							.filter((project) => filter === "all" || project.type === filter)
 							.map((project, index) => {
 								return (
-									<a
-										onClick={restorateScrollTop}
-										key={index}
-										href={`#${index}`}
-									>
-										<img src={project.img} alt="" />
-									</a>
+									<div key={index} className="projects__label-container">
+										<span style={{ fontSize: "0.8rem" }}>
+											{String(project.id).padStart(2, "0")}
+										</span>
+										<a onClick={restorateScrollTop} href={`#${index}`}>
+											<img src={project.img} alt="" />
+										</a>
+									</div>
 								);
 							})}
 					</div>
