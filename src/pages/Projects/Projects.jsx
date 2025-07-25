@@ -1,10 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import portfolioData from "../../assets/data/portfolio-data.json";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import "./Projects.scss";
-import { a } from "framer-motion/client";
 
 const pageVariants = {
 	initial: { opacity: 0 },
@@ -16,6 +15,24 @@ const Projects = () => {
 
 	const handleFilterBtn = (props) => {
 		setFilter(props);
+
+		restorateScrollTop();
+	};
+
+	const restorateScrollTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+		// document.querySelector(".projects__labels-container").scrollTo({
+		// 	top: 0,
+		// 	behavior: "smooth",
+		// });
+
+		// document.querySelector(".masonry").scrollTo({
+		// 	top: 0,
+		// 	behavior: "smooth",
+		// });
 	};
 
 	// useEffect(() => {
@@ -96,7 +113,11 @@ const Projects = () => {
 							.filter((project) => filter === "all" || project.type === filter)
 							.map((project, index) => {
 								return (
-									<a key={index} href={`#${index}`}>
+									<a
+										onClick={restorateScrollTop}
+										key={index}
+										href={`#${index}`}
+									>
 										<img src={project.img} alt="" />
 									</a>
 								);

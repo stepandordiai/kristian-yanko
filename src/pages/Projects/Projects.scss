@@ -1,6 +1,7 @@
 .projects {
-	padding: 65px 15px 15px 15px;
+	padding: 80px 30px 30px 30px;
 	display: flex;
+	gap: 30px;
 }
 
 .projects__title-container {
@@ -41,7 +42,7 @@
 	width: 100%;
 	display: flex;
 	gap: 15px;
-	height: 100vh;
+	height: 100svh;
 }
 
 .projects__labels-container {
@@ -75,10 +76,6 @@
 
 @media screen and (width <= 1000px) {
 	.masonry {
-		column-count: 1;
-	}
-
-	.masonry {
 		gap: 15px;
 
 		.projects__link {
@@ -96,6 +93,7 @@
 @media screen and (width <= 896px) {
 	.projects {
 		padding: 65px 15px 15px 15px;
+		gap: 15px;
 	}
 
 	.projects__mansory-container {
@@ -113,7 +111,7 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: 15px;
 		overflow-y: scroll;
 	}
 }
