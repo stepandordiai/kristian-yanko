@@ -9,6 +9,15 @@ const Footer = () => {
 			top: 0,
 			behavior: "smooth",
 		});
+		document.querySelector(".projects__labels-container").scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+
+		document.querySelector(".masonry").scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
 	};
 
 	const [time, setTime] = useState("");
