@@ -32,37 +32,56 @@ const Home = () => {
 	useEffect(() => {
 		addAnimation();
 
-		const projectLinks = document.querySelectorAll(".home__project-link");
-		const el = document.createElement("div");
-		document.body.appendChild(el);
-		el.classList.add("element");
 		let mouseX;
 		let mouseY;
+
+		const el = document.createElement("div");
+		el.classList.add("element");
+		document.body.appendChild(el);
+
+		const projectLinks = document.querySelectorAll(".home__project-link");
+
+		const handleMouseMove = (e) => {
+			mouseX = e.clientX;
+			mouseY = e.clientY;
+
+			el.style.top = mouseY + "px";
+			el.style.left = mouseX + "px";
+			el.classList.add("element--active");
+		};
+
+		const handleMouseLeave = () => {
+			el.classList.remove("element--active");
+		};
+
+		const handleClick = () => {
+			el.classList.remove("element--active");
+			setTimeout(() => {
+				el.remove();
+			}, 200);
+		};
+
 		projectLinks.forEach((link) => {
-			link.addEventListener("mousemove", (e) => {
-				mouseX = e.clientX;
-				mouseY = e.clientY;
-				el.style.top = mouseY + "px";
-				el.style.left = mouseX + "px";
-				el.classList.add("element--active");
-			});
-
-			link.addEventListener("mouseleave", () => {
-				el.classList.remove("element--active");
-			});
-
-			link.addEventListener("click", () => {
-				el.classList.remove("element--active");
-				setTimeout(() => {
-					el.remove();
-				}, 200);
-			});
+			link.addEventListener("mousemove", handleMouseMove);
+			link.addEventListener("mouseleave", handleMouseLeave);
+			link.addEventListener("click", handleClick);
 		});
+
+		return () => {
+			projectLinks.forEach((link) => {
+				link.addEventListener("mousemove", handleMouseMove);
+				link.addEventListener("mouseleave", handleMouseLeave);
+				link.addEventListener("click", handleClick);
+			});
+		};
 	}, []);
 	return (
 		<>
 			<Helmet>
-				<title>Kristian Yanko</title>
+				<title>
+					Kristian Yanko | Архітектор житлових будинків - індивідуальні та
+					багатоквартирні проєкти
+				</title>
 			</Helmet>
 			<motion.main
 				className="home"
