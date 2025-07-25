@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import "./DarkModeBtn.scss";
 
 const DarkModeBtn = () => {
@@ -14,8 +14,8 @@ const DarkModeBtn = () => {
 	}, [darkMode]);
 
 	return (
-		<button className="dark-mode-btn link-effect" onClick={toggleDarkMode}>
-			{darkMode ? "Темно" : "Світло"}
+		<button onClick={toggleDarkMode} className="dark-mode-btn link-effect">
+			{darkMode ? "Світло" : "Темно"}
 		</button>
 	);
 };
