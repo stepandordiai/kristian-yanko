@@ -77,7 +77,7 @@ const Projects = () => {
 									filter === "family" ? activeFilterBtn : inactiveFilterBtn
 								}
 							>
-								Сімейні будинки
+								Житлові будинки
 							</button>
 							<button
 								onClick={() => handleFilterBtn("not-family")}
@@ -85,7 +85,7 @@ const Projects = () => {
 									filter === "not-family" ? activeFilterBtn : inactiveFilterBtn
 								}
 							>
-								Інші
+								Комерційні будинки
 							</button>
 						</div>
 					</div>

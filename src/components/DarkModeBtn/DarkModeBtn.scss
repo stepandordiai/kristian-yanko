@@ -77,10 +77,13 @@ body.dark button[type="submit"] {
 }
 
 body.dark .dark--active {
-	border: 1px solid #fff;
+	border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+
+	&:hover {
+		border-bottom: 1px solid #fff;
+	}
 }
 
 body.dark .projects__btn--active.dark--active {
-	background: #fff;
-	color: #000;
+	border-bottom: 1px solid #fff;
 }

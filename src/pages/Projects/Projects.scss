@@ -19,18 +19,22 @@
 .projects__btn-container {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 5px;
+	gap: 15px;
 	margin-top: 15px;
 }
 
 .projects__btn {
-	padding: 10px;
-	border: 1px solid #000;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	transition: all 0.3s;
+
+	&:hover {
+		border-bottom: 1px solid rgba(0, 0, 0, 1);
+	}
 }
 
 .projects__btn--active {
-	background: #000000;
-	color: #ffffff;
+	border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
 .projects__mansory-container {
