@@ -14,6 +14,7 @@ import Projects from "./pages/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./utils/ScrollToTop";
 import "./scss/App.scss";
+import CustomCursor from "./components/CustomCursor/CustomCursor";
 
 function App() {
 	const location = useLocation();
@@ -31,6 +32,7 @@ function App() {
 					<Route path="/project-page/:id" element={<ProjectPage />} />
 				</Routes>
 			</AnimatePresence>
+			<CustomCursor />
 			<Footer />
 		</>
 	);

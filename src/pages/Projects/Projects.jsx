@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import portfolioData from "../../assets/data/portfolio-data.json";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import { activeCursor, inactiveCursor } from "../../utils/cursorState";
 import "./Projects.scss";
 
 const pageVariants = {
@@ -24,87 +25,8 @@ const Projects = () => {
 			top: 0,
 			behavior: "smooth",
 		});
-		// document.querySelector(".projects__labels-container").scrollTo({
-		// 	top: 0,
-		// 	behavior: "smooth",
-		// });
-
-		// document.querySelector(".masonry").scrollTo({
-		// 	top: 0,
-		// 	behavior: "smooth",
-		// });
 	};
 
-	useEffect(() => {
-		const el = document.createElement("div");
-		el.classList.add("element");
-		if (!document.body.contains(el)) {
-			document.body.appendChild(el);
-		}
-
-		const projectLinks = document.querySelectorAll(".projects__link");
-
-		const handleMouseMove = (e) => {
-			let mouseX = e.clientX;
-			let mouseY = e.clientY;
-
-			el.style.top = mouseY + "px";
-			el.style.left = mouseX + "px";
-			el.classList.add("element--active");
-		};
-
-		const handleMouseLeave = () => {
-			el.classList.remove("element--active");
-		};
-
-		const handleClick = () => {
-			el.classList.remove("element--active");
-			setTimeout(() => {
-				el.remove();
-			}, 200);
-		};
-
-		projectLinks.forEach((link) => {
-			link.addEventListener("mousemove", handleMouseMove);
-			link.addEventListener("mouseleave", handleMouseLeave);
-			link.addEventListener("click", handleClick);
-		});
-
-		return () => {
-			projectLinks.forEach((link) => {
-				link.removeEventListener("mousemove", handleMouseMove);
-				link.removeEventListener("mouseleave", handleMouseLeave);
-				link.removeEventListener("click", handleClick);
-			});
-			el.remove();
-		};
-	}, []);
-
-	// useEffect(() => {
-	// 	document.querySelectorAll(".projects__link").forEach((img) => {
-	// 		document.addEventListener("scroll", () => {
-	// 			const imgRect = img.getBoundingClientRect();
-	// 			if (imgRect.top < window.innerHeight) {
-	// 				img.classList.add("projects__link--active");
-	// 			}
-	// 		});
-	// 		img.addEventListener("load", () => {
-	// 			setTimeout(() => {
-	// 				const imgRect = img.getBoundingClientRect();
-	// 				if (imgRect.top < window.innerHeight) {
-	// 					img.classList.add("projects__link--active");
-	// 				}
-	// 			}, 500);
-	// 		});
-
-	// 		setTimeout(() => {
-	// 			const imgRect = img.getBoundingClientRect();
-	// 			if (imgRect.top < window.innerHeight) {
-	// 				img.classList.add("projects__link--active");
-	// 			}
-	// 		}, 500);
-	// 	});
-	// });
 	const inactiveFilterBtn = "projects__btn dark--active";
 	const activeFilterBtn = "projects__btn projects__btn--active dark--active";
 
@@ -174,6 +96,8 @@ const Projects = () => {
 							.map((project, index) => {
 								return (
 									<NavLink
+										onMouseMove={activeCursor}
+										onMouseLeave={inactiveCursor}
 										key={index}
 										className="projects__link"
 										id={index}

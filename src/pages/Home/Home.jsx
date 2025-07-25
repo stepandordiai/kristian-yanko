@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import portfolioData from "./../../assets/data/portfolio-data.json";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { activeCursor, inactiveCursor } from "../../utils/cursorState";
 import "./Home.scss";
 
 const pageVariants = {
@@ -31,49 +32,6 @@ const Home = () => {
 
 	useEffect(() => {
 		addAnimation();
-
-		const el = document.createElement("div");
-		el.classList.add("element");
-		if (!document.body.contains(el)) {
-			document.body.appendChild(el);
-		}
-
-		const projectLinks = document.querySelectorAll(".home__project-link");
-
-		const handleMouseMove = (e) => {
-			let mouseX = e.clientX;
-			let mouseY = e.clientY;
-
-			el.style.top = mouseY + "px";
-			el.style.left = mouseX + "px";
-			el.classList.add("element--active");
-		};
-
-		const handleMouseLeave = () => {
-			el.classList.remove("element--active");
-		};
-
-		const handleClick = () => {
-			el.classList.remove("element--active");
-			setTimeout(() => {
-				el.remove();
-			}, 200);
-		};
-
-		projectLinks.forEach((link) => {
-			link.addEventListener("mousemove", handleMouseMove);
-			link.addEventListener("mouseleave", handleMouseLeave);
-			link.addEventListener("click", handleClick);
-		});
-
-		return () => {
-			projectLinks.forEach((link) => {
-				link.removeEventListener("mousemove", handleMouseMove);
-				link.removeEventListener("mouseleave", handleMouseLeave);
-				link.removeEventListener("click", handleClick);
-			});
-			el.remove();
-		};
 	}, []);
 	return (
 		<>
@@ -107,15 +65,17 @@ const Home = () => {
 							{portfolioData.slice(0, 8).map((project) => {
 								return (
 									<NavLink
+										onMouseMove={activeCursor}
+										onMouseLeave={inactiveCursor}
 										className="home__project-link"
 										key={project.id}
 										to={`/project-page/${project.id}`}
-										style={{ cursor: "none" }}
 									>
 										<img
 											className="home__project-img"
 											key={project.id}
 											src={project.img}
+											style={{ pointerEvents: "none" }}
 											alt=""
 										/>
 									</NavLink>
