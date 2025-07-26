@@ -41,8 +41,8 @@ const Home = () => {
 		<>
 			<Helmet>
 				<title>
-					Kristian Yanko | Архітектор житлових будинків - індивідуальні та
-					багатоквартирні проєкти
+					Kristian Yanko | Проектування просторів, що надихають — житлова та
+					комерційна архітектура від Крістіана Янко
 				</title>
 			</Helmet>
 			<motion.main
@@ -55,9 +55,12 @@ const Home = () => {
 			>
 				<div className="home__top">
 					<h1 className="home__title">
-						Архітектор житлових будинків - індивідуальні та багатоквартирні
-						проєкти
+						Проектування просторів, що надихають — житлова та комерційна
+						архітектура від Крістіана Янко
 					</h1>
+					<NavLink className="home__link" to="/contact-me">
+						Зв'яжіться зі мною
+					</NavLink>
 				</div>
 				<div className="home__bottom">
 					<div

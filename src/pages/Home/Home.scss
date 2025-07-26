@@ -9,16 +9,27 @@
 }
 
 .home__top {
-	height: 50svh;
+	min-height: 50svh;
 	@include flex-end-center;
-	gap: 30px;
+	padding-top: 65px;
+	row-gap: 15px;
 	flex-direction: column;
 }
 
 .home__title {
-	font-size: clamp(1.5rem, 4vw, 2rem);
+	font-size: clamp(1.5rem, 3vw, 2rem);
 	text-align: center;
 	padding: 0 30px;
+}
+
+.home__link {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	padding-bottom: 15px;
+	transition: all 0.3s;
+
+	&:hover {
+		border-bottom: 1px solid rgb(0, 0, 0);
+	}
 }
 
 .home__bottom {
@@ -83,10 +94,6 @@
 
 	.home__project-img {
 		width: 250px;
-	}
-
-	.home__top {
-		gap: 15px;
 	}
 
 	.home__title {

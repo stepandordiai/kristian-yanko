@@ -8,6 +8,15 @@ body.dark {
 	background: #000 !important;
 }
 
+// Home
+body.dark .home__link {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+	&:hover {
+		border-bottom: 1px solid rgb(255, 255, 255);
+	}
+}
+
 body.dark .header {
 	color: #fff;
 	background: #000;
@@ -60,7 +69,6 @@ body.dark .footer {
 }
 
 // Contact
-
 body.dark button[type="submit"] {
 	background: #fff;
 	color: #000;
