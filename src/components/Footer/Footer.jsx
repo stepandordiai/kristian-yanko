@@ -5,19 +5,25 @@ import "./Footer.scss";
 
 const Footer = () => {
 	const restoreScrollToTop = () => {
+		const projectLabels = document.querySelector(".projects__labels-container");
+		const masonry = document.querySelector(".masonry");
+
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth",
 		});
-		document.querySelector(".projects__labels-container").scrollTo({
-			top: 0,
-			behavior: "smooth",
-		});
 
-		document.querySelector(".masonry").scrollTo({
-			top: 0,
-			behavior: "smooth",
-		});
+		if (projectLabels && masonry) {
+			projectLabels.scrollTo({
+				top: 0,
+				behavior: "smooth",
+			});
+
+			masonry.scrollTo({
+				top: 0,
+				behavior: "smooth",
+			});
+		}
 	};
 
 	const [time, setTime] = useState("");

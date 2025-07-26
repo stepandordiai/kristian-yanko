@@ -26,7 +26,7 @@ const MenuBtn = () => {
 				setTimeout(() => {
 					link.classList.add("menu__nav-link--active");
 					// I start with index 1 to ensure the first element has also timeout and prevent to start it immediately
-				}, (index + 1) * 150)
+				}, (index + 1) * 100)
 			);
 		}
 	};
