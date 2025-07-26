@@ -3,7 +3,11 @@ import { useState } from "react";
 import portfolioData from "../../assets/data/portfolio-data.json";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import { activeCursor, inactiveCursor } from "../../utils/cursorState";
+import {
+	activeCursor,
+	inactiveCursor,
+	removeCursor,
+} from "../../utils/cursorState";
 import "./Projects.scss";
 import { div } from "framer-motion/client";
 
@@ -100,6 +104,7 @@ const Projects = () => {
 									<NavLink
 										onMouseMove={activeCursor}
 										onMouseLeave={inactiveCursor}
+										onClick={removeCursor}
 										key={index}
 										className="projects__link"
 										id={index}

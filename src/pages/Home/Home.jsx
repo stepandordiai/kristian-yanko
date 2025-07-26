@@ -3,7 +3,11 @@ import { NavLink } from "react-router-dom";
 import portfolioData from "./../../assets/data/portfolio-data.json";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { activeCursor, inactiveCursor } from "../../utils/cursorState";
+import {
+	activeCursor,
+	inactiveCursor,
+	removeCursor,
+} from "../../utils/cursorState";
 import "./Home.scss";
 
 const pageVariants = {
@@ -67,6 +71,7 @@ const Home = () => {
 									<NavLink
 										onMouseMove={activeCursor}
 										onMouseLeave={inactiveCursor}
+										onClick={removeCursor}
 										className="home__project-link"
 										key={project.id}
 										to={`/project-page/${project.id}`}
