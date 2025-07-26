@@ -1,3 +1,3 @@
 # Kristian Yanko
 
-<img src="./public/ss/kristian-yanko-ss-v1-c.png" alt="" />
+<img src="./public/ss/kristian-yanko-ss-v3-c.png" alt="" />
