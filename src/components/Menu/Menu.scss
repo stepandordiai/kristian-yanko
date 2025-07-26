@@ -3,6 +3,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
+	gap: 15px;
 	overflow: hidden;
 }
 
@@ -16,10 +17,14 @@
 .menu__nav-link {
 	font-size: 1.25rem;
 	color: #000;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.5s;
 }
 
 .menu__nav-link--active {
-	color: #000;
+	opacity: 1;
+	pointer-events: all;
 }
 
 .menu__projects-qty {

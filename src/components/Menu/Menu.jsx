@@ -18,6 +18,10 @@ const Menu = () => {
 				document
 					.querySelector(".menu-btn")
 					.classList.remove("menu-btn--active");
+
+				menuNavLink.forEach((link) =>
+					link.classList.remove("menu__nav-link--active")
+				);
 			});
 		});
 
@@ -26,6 +30,9 @@ const Menu = () => {
 				.querySelector(".header__bottom")
 				.classList.remove("header__bottom--active");
 			document.querySelector(".menu-btn").classList.remove("menu-btn--active");
+			menuNavLink.forEach((link) =>
+				link.classList.remove("menu__nav-link--active")
+			);
 		});
 	}, []);
 
@@ -58,6 +65,15 @@ const Menu = () => {
 					Контакти
 				</NavLink>
 			</nav>
+			<div>
+				<a
+					className="menu__link link-effect"
+					href="https://www.instagram.com/kristian.janko"
+					target="_blank"
+				>
+					Instagram
+				</a>
+			</div>
 		</div>
 	);
 };
