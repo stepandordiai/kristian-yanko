@@ -1,3 +1,1 @@
-add sitemap
-learn about framer-motion
-learn infinite slider
+Update Lng

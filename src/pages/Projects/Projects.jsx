@@ -9,7 +9,6 @@ import {
 	removeCursor,
 } from "../../utils/cursorState";
 import "./Projects.scss";
-import { div } from "framer-motion/client";
 
 const pageVariants = {
 	initial: { opacity: 0 },
@@ -61,17 +60,17 @@ const Projects = () => {
 								Всі проєкти
 							</button>
 							<button
-								onClick={() => handleFilterBtn("family")}
+								onClick={() => handleFilterBtn("residential")}
 								className={
-									filter === "family" ? activeFilterBtn : inactiveFilterBtn
+									filter === "residential" ? activeFilterBtn : inactiveFilterBtn
 								}
 							>
 								Житлові будинки
 							</button>
 							<button
-								onClick={() => handleFilterBtn("not-family")}
+								onClick={() => handleFilterBtn("commercial")}
 								className={
-									filter === "not-family" ? activeFilterBtn : inactiveFilterBtn
+									filter === "commercial" ? activeFilterBtn : inactiveFilterBtn
 								}
 							>
 								Комерційні будинки

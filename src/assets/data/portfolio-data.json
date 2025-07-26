@@ -1,98 +1,50 @@
 [
 	{
 		"id": 1,
-		"name": "Project 1",
-		"img": "/01.jpg",
-		"type": "not-family"
+		"name": "Wedding palace Deluxe",
+		"img": "/02.jpg",
+		"type": "commercial"
 	},
 	{
 		"id": 2,
-		"name": "Project 2",
-		"img": "/02.jpg",
-		"type": "not-family"
+		"name": "Wedding palace Deluxe",
+		"img": "/01.jpg",
+		"type": "commercial"
 	},
 	{
 		"id": 3,
-		"name": "Project 3",
+		"name": "RD Kavalírka – PRAHA",
 		"img": "/03.jpg",
-		"type": "family"
+		"type": "residential"
 	},
 	{
 		"id": 4,
-		"name": "Project 4",
+		"name": "RD Kavalírka – PRAHA",
 		"img": "/04.jpg",
-		"type": "family"
+		"type": "residential"
 	},
 	{
 		"id": 5,
-		"name": "Project 5",
+		"name": "RD Skorotice – ÚSTÍ NAD LABEM",
 		"img": "/05.jpg",
-		"type": "family"
+		"type": "residential"
 	},
 	{
 		"id": 6,
-		"name": "Project 6",
+		"name": "RD Skorotice – ÚSTÍ NAD LABEM",
 		"img": "/06.jpg",
-		"type": "family"
+		"type": "residential"
 	},
 	{
 		"id": 7,
-		"name": "Project 7",
+		"name": "RD Vlčnov – CHRUDIM",
 		"img": "/07.jpg",
-		"type": "family"
+		"type": "residential"
 	},
 	{
 		"id": 8,
-		"name": "Project 8",
+		"name": "RD Vlčnov – CHRUDIM",
 		"img": "/08.jpg",
-		"type": "family"
-	},
-	{
-		"id": 9,
-		"name": "Project 9",
-		"img": "/01.jpg",
-		"type": "not-family"
-	},
-	{
-		"id": 10,
-		"name": "Project 10",
-		"img": "/02.jpg",
-		"type": "not-family"
-	},
-	{
-		"id": 11,
-		"name": "Project 11",
-		"img": "/03.jpg",
-		"type": "family"
-	},
-	{
-		"id": 12,
-		"name": "Project 12",
-		"img": "/04.jpg",
-		"type": "family"
-	},
-	{
-		"id": 13,
-		"name": "Project 13",
-		"img": "/05.jpg",
-		"type": "family"
-	},
-	{
-		"id": 14,
-		"name": "Project 14",
-		"img": "/06.jpg",
-		"type": "family"
-	},
-	{
-		"id": 15,
-		"name": "Project 15",
-		"img": "/07.jpg",
-		"type": "family"
-	},
-	{
-		"id": 16,
-		"name": "Project 16",
-		"img": "/08.jpg",
-		"type": "family"
+		"type": "residential"
 	}
 ]

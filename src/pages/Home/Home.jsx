@@ -69,7 +69,7 @@ const Home = () => {
 						data-direction="left"
 					>
 						<div className="scroller__inner">
-							{portfolioData.slice(0, 8).map((project) => {
+							{portfolioData.map((project) => {
 								return (
 									<NavLink
 										onMouseMove={activeCursor}
