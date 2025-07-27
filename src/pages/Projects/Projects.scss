@@ -1,3 +1,5 @@
+@use "./../../scss/mixins" as *;
+
 .projects {
 	padding: 80px 30px 30px 30px;
 	display: flex;
@@ -14,7 +16,7 @@
 }
 
 .projects__title {
-	font-size: 2.5rem;
+	font-size: clamp(2rem, 6vw, 4rem);
 }
 
 .projects__btn-container {
@@ -27,7 +29,7 @@
 .projects__btn {
 	padding-bottom: 15px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-	transition: all 0.3s;
+	transition: border-bottom 0.3s;
 
 	&:hover {
 		border-bottom: 1px solid rgba(0, 0, 0, 1);
@@ -56,9 +58,7 @@
 }
 
 .projects__label-container {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
+	@include flex-center-end;
 	gap: 15px;
 }
 

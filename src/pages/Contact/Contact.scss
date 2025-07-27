@@ -4,6 +4,7 @@
 	min-height: 100svh;
 	padding: 80px 30px 30px 30px;
 	display: flex;
+	gap: 30px;
 }
 
 .contact__left-container {
@@ -14,7 +15,7 @@
 }
 
 .contact__title {
-	font-size: 2.5rem;
+	font-size: clamp(2rem, 6vw, 4rem);
 }
 
 .contact__details-container {
@@ -30,7 +31,6 @@
 @media screen and (width <= 900px) {
 	.contact {
 		flex-direction: column;
-		row-gap: 15px;
 	}
 }
 

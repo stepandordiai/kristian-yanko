@@ -28,9 +28,9 @@ const ContactMe = () => {
 					<div>
 						<p
 							style={{
-								fontSize: "1.25rem",
+								fontSize: "1.5rem",
 								fontWeight: 500,
-								color: "hsl(0, 0%, 50%)",
+								marginBottom: 15,
 							}}
 						>
 							Pořadník zakázek
@@ -48,9 +48,9 @@ const ContactMe = () => {
 					<div>
 						<p
 							style={{
-								fontSize: "1.25rem",
+								fontSize: "1.5rem",
 								fontWeight: 500,
-								color: "hsl(0, 0%, 50%)",
+								marginBottom: 15,
 							}}
 						>
 							Aktuální pořadí
@@ -68,9 +68,9 @@ const ContactMe = () => {
 					<div>
 						<p
 							style={{
-								fontSize: "1.25rem",
+								fontSize: "1.5rem",
 								fontWeight: 500,
-								color: "hsl(0, 0%, 50%)",
+								marginBottom: 15,
 							}}
 						>
 							Stručný harmonogram výstavby

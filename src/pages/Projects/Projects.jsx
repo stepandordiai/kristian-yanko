@@ -81,6 +81,8 @@ const Projects = () => {
 				<div className="projects__mansory-container">
 					<div className="projects__labels-container">
 						{portfolioData
+							.slice()
+							.reverse()
 							.filter((project) => filter === "all" || project.type === filter)
 							.map((project, index) => {
 								return (
@@ -89,7 +91,11 @@ const Projects = () => {
 											{String(project.id).padStart(2, "0")}
 										</span>
 										<a onClick={restorateScrollTop} href={`#${index}`}>
-											<img src={project.img} alt="" />
+											<img
+												src={project.img[0]}
+												alt={project.name}
+												loading="lazy"
+											/>
 										</a>
 									</div>
 								);
@@ -97,6 +103,8 @@ const Projects = () => {
 					</div>
 					<div className="masonry">
 						{portfolioData
+							.slice()
+							.reverse()
 							.filter((project) => filter === "all" || project.type === filter)
 							.map((project, index) => {
 								return (
@@ -109,7 +117,11 @@ const Projects = () => {
 										id={index}
 										to={`/project-page/${project.id}`}
 									>
-										<img src={project.img} alt="" />
+										<img
+											src={project.img[0]}
+											alt={project.name}
+											loading="lazy"
+										/>
 									</NavLink>
 								);
 							})}

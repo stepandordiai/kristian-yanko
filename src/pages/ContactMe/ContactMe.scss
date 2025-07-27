@@ -23,13 +23,12 @@
 }
 
 .contact-me__title {
-	font-size: 2.5rem;
+	font-size: clamp(2rem, 6vw, 4rem);
 }
 
 @media screen and (width <= 900px) {
 	.contact-me {
 		flex-direction: column;
-		row-gap: 15px;
 	}
 }
 
