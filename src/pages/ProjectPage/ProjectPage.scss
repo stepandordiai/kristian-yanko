@@ -20,6 +20,11 @@
 	margin-top: 30px;
 }
 
+.project-page__related-title {
+	font-size: clamp(1.5rem, 3vw, 3rem);
+	margin-bottom: 15px;
+}
+
 .project-page__related-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -43,5 +48,9 @@
 @media screen and (width < 808px) {
 	.project-page__img-container {
 		flex-direction: column;
+	}
+
+	.project-page__related-grid {
+		grid-template-columns: repeat(1, 1fr);
 	}
 }

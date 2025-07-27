@@ -94,8 +94,8 @@ const ProjectPage = () => {
 					</NavLink>
 				</p>
 				{relatedProjects.length > 0 && (
-					<div className="project-page__related">
-						<p style={{ fontSize: "2rem", marginBottom: "15px" }}>
+					<div>
+						<p className="project-page__related-title">
 							Вам також може сподобатися
 						</p>
 						<div className="project-page__related-grid">
