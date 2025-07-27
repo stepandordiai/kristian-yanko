@@ -30,6 +30,9 @@ const Home = () => {
 			const duplicatedItem = item.cloneNode(true);
 
 			duplicatedItem.setAttribute("aria-hidden", "true");
+			duplicatedItem.addEventListener("mousemove", activeCursor);
+			duplicatedItem.addEventListener("mouseleave", inactiveCursor);
+			duplicatedItem.addEventListener("click", removeCursor);
 			scrollerInner?.appendChild(duplicatedItem);
 		});
 	}
@@ -69,26 +72,29 @@ const Home = () => {
 						data-direction="left"
 					>
 						<div className="scroller__inner">
-							{portfolioData.map((project) => {
-								return (
-									<NavLink
-										onMouseMove={activeCursor}
-										onMouseLeave={inactiveCursor}
-										onClick={removeCursor}
-										className="home__project-link"
-										key={project.id}
-										to={`/project-page/${project.id}`}
-									>
-										<img
-											className="home__project-img"
+							{portfolioData
+								.slice()
+								.reverse()
+								.map((project) => {
+									return (
+										<NavLink
+											onMouseMove={activeCursor}
+											onMouseLeave={inactiveCursor}
+											onClick={removeCursor}
+											className="home__project-link"
 											key={project.id}
-											src={project.img}
-											style={{ pointerEvents: "none" }}
-											alt=""
-										/>
-									</NavLink>
-								);
-							})}
+											to={`/project-page/${project.id}`}
+										>
+											<img
+												className="home__project-img"
+												key={project.id}
+												src={project.img[0]}
+												style={{ pointerEvents: "none" }}
+												alt=""
+											/>
+										</NavLink>
+									);
+								})}
 						</div>
 					</div>
 				</div>

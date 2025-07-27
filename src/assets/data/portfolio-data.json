@@ -2,49 +2,25 @@
 	{
 		"id": 1,
 		"name": "Wedding palace Deluxe",
-		"img": "/02.jpg",
+		"img": ["/02.jpg", "/01.jpg"],
 		"type": "commercial"
 	},
 	{
 		"id": 2,
-		"name": "Wedding palace Deluxe",
-		"img": "/01.jpg",
-		"type": "commercial"
+		"name": "RD Skorotice – ÚSTÍ NAD LABEM",
+		"img": ["/05.jpg", "/06.jpg"],
+		"type": "residential"
 	},
 	{
 		"id": 3,
-		"name": "RD Kavalírka – PRAHA",
-		"img": "/03.jpg",
+		"name": "RD Vlčnov – CHRUDIM",
+		"img": ["/08.jpg", "/07.jpg"],
 		"type": "residential"
 	},
 	{
 		"id": 4,
 		"name": "RD Kavalírka – PRAHA",
-		"img": "/04.jpg",
-		"type": "residential"
-	},
-	{
-		"id": 5,
-		"name": "RD Skorotice – ÚSTÍ NAD LABEM",
-		"img": "/05.jpg",
-		"type": "residential"
-	},
-	{
-		"id": 6,
-		"name": "RD Skorotice – ÚSTÍ NAD LABEM",
-		"img": "/06.jpg",
-		"type": "residential"
-	},
-	{
-		"id": 7,
-		"name": "RD Vlčnov – CHRUDIM",
-		"img": "/07.jpg",
-		"type": "residential"
-	},
-	{
-		"id": 8,
-		"name": "RD Vlčnov – CHRUDIM",
-		"img": "/08.jpg",
+		"img": ["/04.jpg", "/03.jpg"],
 		"type": "residential"
 	}
 ]

@@ -17,7 +17,7 @@
 }
 
 .home__title {
-	font-size: clamp(1.5rem, 3vw, 2rem);
+	font-size: clamp(1.5rem, 3vw, 3rem);
 	text-align: center;
 	padding: 0 30px;
 }
@@ -25,7 +25,7 @@
 .home__link {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 	padding-bottom: 15px;
-	transition: all 0.3s;
+	transition: border-bottom 0.3s;
 
 	&:hover {
 		border-bottom: 1px solid rgb(0, 0, 0);
