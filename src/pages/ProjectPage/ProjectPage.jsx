@@ -1,7 +1,12 @@
 import { Helmet } from "react-helmet-async";
-import { useParams } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 import portfolioData from "./../../assets/data/portfolio-data.json";
 import { motion } from "framer-motion";
+import {
+	activeCursor,
+	inactiveCursor,
+	removeCursor,
+} from "../../utils/cursorState";
 import "./ProjectPage.scss";
 
 const pageVariants = {
@@ -14,6 +19,10 @@ const ProjectPage = () => {
 	const { id } = useParams();
 
 	const project = portfolioData.find((project) => project.id == id);
+
+	const relatedProjects = portfolioData.filter((item) => {
+		return item.type === project.type && item.name !== project.name;
+	});
 
 	return (
 		<>
@@ -28,8 +37,18 @@ const ProjectPage = () => {
 				exit="exit"
 				transition={{ duration: 0.5 }}
 			>
-				<img src={project.img} alt="" />
-				<h1 className="project-page__title">{project.name}</h1>
+				<div className="project-page__img-container">
+					<div>
+						<img src={project.img[0]} alt={project.name} loading="lazy" />
+					</div>
+					<div>
+						<img src={project.img[1]} alt={project.name} loading="lazy" />
+					</div>
+				</div>
+				<div className="project-page__title-container">
+					<p>{project.year}</p>
+					<h1 className="project-page__title">{project.name}</h1>
+				</div>
 				<p className="project-page__info">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, fuga
 					harum quis quo quidem provident natus culpa obcaecati ullam
@@ -68,6 +87,37 @@ const ProjectPage = () => {
 					neque esse dolorem est saepe laudantium, odio, enim laborum cumque ea
 					debitis hic harum. Aspernatur?
 				</p>
+				<p style={{ margin: "30px 0", textAlign: "right" }}>
+					Потрібен проєкт?{" "}
+					<NavLink className="home__link" to="/contact-me">
+						Зв'яжіться зі мною
+					</NavLink>
+				</p>
+				{relatedProjects.length > 0 && (
+					<div className="project-page__related">
+						<p style={{ fontSize: "2rem", marginBottom: "15px" }}>
+							Вам також може сподобатися
+						</p>
+						<div className="project-page__related-grid">
+							{relatedProjects.map((project) => {
+								return (
+									<NavLink
+										onMouseMove={activeCursor}
+										onMouseLeave={inactiveCursor}
+										onClick={removeCursor}
+										to={`/project-page/${project.id}`}
+									>
+										<img
+											src={project.img[0]}
+											alt={project.name}
+											loading="lazy"
+										/>
+									</NavLink>
+								);
+							})}
+						</div>
+					</div>
+				)}
 			</motion.div>
 		</>
 	);
