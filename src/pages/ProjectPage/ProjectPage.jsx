@@ -7,6 +7,7 @@ import {
 	inactiveCursor,
 	removeCursor,
 } from "../../utils/cursorState";
+import { useTranslation } from "react-i18next";
 import "./ProjectPage.scss";
 
 const pageVariants = {
@@ -16,7 +17,9 @@ const pageVariants = {
 };
 
 const ProjectPage = () => {
-	const { id } = useParams();
+	const { t } = useTranslation();
+
+	const { id, lng } = useParams();
 
 	const project = portfolioData.find((project) => project.id == id);
 
@@ -88,24 +91,25 @@ const ProjectPage = () => {
 					debitis hic harum. Aspernatur?
 				</p>
 				<p style={{ margin: "30px 0", textAlign: "right" }}>
-					Потрібен проєкт?{" "}
-					<NavLink className="home__link" to="/contact-me">
-						Зв'яжіться зі мною
+					{t("project_page.need_a_project")}{" "}
+					<NavLink className="home__link" to={`/${lng}/contact-me`}>
+						{t("contact_me")}
 					</NavLink>
 				</p>
 				{relatedProjects.length > 0 && (
 					<div>
 						<p className="project-page__related-title">
-							Вам також може сподобатися
+							{t("project_page.you_may_also_like")}
 						</p>
 						<div className="project-page__related-grid">
 							{relatedProjects.map((project) => {
 								return (
 									<NavLink
+										key={project.id}
 										onMouseMove={activeCursor}
 										onMouseLeave={inactiveCursor}
 										onClick={removeCursor}
-										to={`/project-page/${project.id}`}
+										to={`/${lng}/project-page/${project.id}`}
 									>
 										<img
 											src={project.img[0]}

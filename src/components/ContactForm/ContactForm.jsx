@@ -1,7 +1,10 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "./ContactForm.scss";
 
 const ContactForm = () => {
+	const { t } = useTranslation();
+
 	useEffect(() => {
 		const inputs = document.querySelectorAll(".input");
 		const labels = document.querySelectorAll(".label");
@@ -23,8 +26,10 @@ const ContactForm = () => {
 	return (
 		<div className="contact__form-container">
 			<div>
-				<p style={{ fontSize: "2rem", marginBottom: 15 }}>Контактна форма</p>
-				<p>Заповніть форму, і я зв'яжуся з вами протягом 24 годин</p>
+				<p style={{ fontSize: "2rem", marginBottom: 15 }}>
+					{t("contact_form.title")}
+				</p>
+				<p>{t("contact_form.info")}</p>
 			</div>
 			<form
 				className="contact__form"
@@ -33,7 +38,7 @@ const ContactForm = () => {
 				encType="text/plain"
 			>
 				<div>
-					<p style={{ marginBottom: 15 }}>Я зацікавлений в</p>
+					<p style={{ marginBottom: 15 }}>{t("contact_form.checkbox_title")}</p>
 					<div className="contact__checkbox-wrapper">
 						<div className="checkbox-container">
 							<input
@@ -42,7 +47,7 @@ const ContactForm = () => {
 								defaultValue="Residential buildings"
 								name="I am interested in"
 							/>
-							<label htmlFor="checkbox-1">Житлові будинки</label>
+							<label htmlFor="checkbox-1">{t("residential")}</label>
 						</div>
 						<div className="checkbox-container">
 							<input
@@ -51,7 +56,7 @@ const ContactForm = () => {
 								defaultValue="Commercial buildings"
 								name="I am interested in"
 							/>
-							<label htmlFor="checkbox-2">Комерційні будинки</label>
+							<label htmlFor="checkbox-2">{t("commercial")}</label>
 						</div>
 						<div className="checkbox-container">
 							<input
@@ -60,13 +65,15 @@ const ContactForm = () => {
 								defaultValue="Other"
 								name="I am interested in"
 							/>
-							<label htmlFor="checkbox-3">Інше</label>
+							<label htmlFor="checkbox-3">
+								{t("contact_form.checkbox_label_3")}
+							</label>
 						</div>
 					</div>
 				</div>
 				<div className="input-container">
 					<label className="label" htmlFor="first-name">
-						Ім'я
+						{t("contact_form.first_name")}
 					</label>
 					<input
 						className="input"
@@ -78,7 +85,7 @@ const ContactForm = () => {
 				</div>
 				<div className="input-container">
 					<label className="label" htmlFor="last-name">
-						Прізвище
+						{t("contact_form.last_name")}
 					</label>
 					<input
 						className="input"
@@ -89,17 +96,17 @@ const ContactForm = () => {
 				</div>
 				<div className="input-container">
 					<label className="label" htmlFor="tel">
-						Номер телефону
+						{t("tel")}
 					</label>
 					<input className="input" id="tel" type="tel" name="Tel" required />
 				</div>
 				<div className="input-container text-area-container">
 					<label className="label" htmlFor="message">
-						Повідомлення
+						{t("contact_form.message")}
 					</label>
 					<textarea className="input" name="Message" id="message"></textarea>
 				</div>
-				<button type="submit">Відправити</button>
+				<button type="submit">{t("contact_form.send")}</button>
 			</form>
 		</div>
 	);

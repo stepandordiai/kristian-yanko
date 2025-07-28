@@ -8,6 +8,8 @@ import {
 	inactiveCursor,
 	removeCursor,
 } from "../../utils/cursorState";
+import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./Home.scss";
 
 const pageVariants = {
@@ -17,6 +19,10 @@ const pageVariants = {
 };
 
 const Home = () => {
+	const { t } = useTranslation();
+
+	const { lng } = useParams();
+
 	function addAnimation() {
 		const scroller = document.querySelector(".scroller");
 
@@ -43,10 +49,7 @@ const Home = () => {
 	return (
 		<>
 			<Helmet>
-				<title>
-					Kristian Yanko | Проектування просторів, що надихають — житлова та
-					комерційна архітектура від Крістіана Янко
-				</title>
+				<title>Kristian Yanko | {t("home.title")}</title>
 			</Helmet>
 			<motion.main
 				className="home"
@@ -57,12 +60,9 @@ const Home = () => {
 				transition={{ duration: 0.5 }}
 			>
 				<div className="home__top">
-					<h1 className="home__title">
-						Проектування просторів, що надихають — житлова та комерційна
-						архітектура від Крістіана Янко
-					</h1>
-					<NavLink className="home__link" to="/contact-me">
-						Зв'яжіться зі мною
+					<h1 className="home__title">{t("home.title")}</h1>
+					<NavLink className="home__link" to={`/${lng}/contact-me`}>
+						{t("contact_me")}
 					</NavLink>
 				</div>
 				<div className="home__bottom">
@@ -83,14 +83,14 @@ const Home = () => {
 											onClick={removeCursor}
 											className="home__project-link"
 											key={project.id}
-											to={`/project-page/${project.id}`}
+											to={`/${lng}/project-page/${project.id}`}
 										>
 											<img
 												className="home__project-img"
 												key={project.id}
 												src={project.img[0]}
 												style={{ pointerEvents: "none" }}
-												alt=""
+												alt={project.name}
 											/>
 										</NavLink>
 									);

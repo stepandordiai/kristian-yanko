@@ -21,6 +21,6 @@
 	width: 150px !important;
 
 	&::before {
-		content: "Переглянути";
+		content: attr(data-cursor-value);
 	}
 }

@@ -3,43 +3,50 @@ import MenuBtn from "../MenuBtn/MenuBtn";
 import Menu from "../Menu/Menu";
 import DarkModeBtn from "../DarkModeBtn/DarkModeBtn";
 import projectsData from "./../../assets/data/portfolio-data.json";
+import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./Header.scss";
 
 const Header = () => {
 	const inactiveLink = "header__nav-link link-effect";
 	const activeLink = "header__nav-link link-effect link-effect--active";
 
+	const { t } = useTranslation();
+
+	const { lng } = useParams();
+
 	return (
 		<header className="header">
 			<div className="header__top">
-				<NavLink className="header__logo-link" to={"/"}>
+				<NavLink className="header__logo-link" to={`/${lng}/`}>
 					<div className="header__logo-link-txt">Kristian Yanko</div>
 				</NavLink>
 				<nav className="header__nav">
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to={"/"}
+						to={`/${lng}/`}
+						end
 					>
-						Головна
+						{t("home_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to={"/about"}
+						to={`/${lng}/about`}
 					>
-						Про мене
+						{t("about_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to={"/projects"}
+						to={`/${lng}/projects`}
 					>
-						<span>Проєкти</span>
+						<span>{t("projects_title")}</span>
 						<span className="header__projects-qty">{projectsData.length}</span>
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to={"/contact"}
+						to={`/${lng}/contact`}
 					>
-						Контакти
+						{t("contact_title")}
 					</NavLink>
 				</nav>
 				<div className="header__right-section">

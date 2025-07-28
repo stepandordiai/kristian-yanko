@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import "./About.scss";
 
 const pageVariants = {
@@ -9,10 +10,12 @@ const pageVariants = {
 };
 
 const About = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<Helmet>
-				<title>Kristian Yanko | Про мене</title>
+				<title>Kristian Yanko | {t("about_title")}</title>
 			</Helmet>
 			<motion.main
 				variants={pageVariants}
@@ -23,34 +26,16 @@ const About = () => {
 				className="about"
 			>
 				<div className="about__title-container">
-					<h1 className="about__title">Про мене</h1>
+					<h1 className="about__title">{t("about_title")}</h1>
 				</div>
 				<div className="about__container">
-					<p>
-						Я — архітектор із Чехії, який спеціалізується на проєктуванні
-						сімейних будинків і багатоквартирних житлових будівель. Моєю метою є
-						створення просторів, що поєднують у собі функціональність, естетику
-						та сталість.
-					</p>
+					<p>{t("about.desc_1")}</p>
 					<br />
-					<p>
-						У своїй роботі я зосереджуюсь на глибокому розумінні потреб людей,
-						які будуть жити в цих просторах. Незалежно від того, чи це затишний
-						приватний будинок, чи житловий комплекс, я прагну створювати
-						середовище, яке буде не лише візуально привабливим, а й практичним,
-						енергоефективним та гармонійно інтегрованим у навколишній ландшафт.
-					</p>
+					<p>{t("about.desc_2")}</p>
 					<br />
-					<p>
-						Від концепції до реалізації я тісно співпрацюю з клієнтами,
-						інженерами та підрядниками, щоб кожен проєкт відповідав чіткому
-						баченню, будівельним нормам і приносив довготривалу цінність.
-					</p>
+					<p>{t("about.desc_3")}</p>
 					<br />
-					<p>
-						Якщо ви шукаєте продумані та сучасні архітектурні рішення для
-						комфортного життя — я допоможу втілити вашу ідею в реальність.
-					</p>
+					<p>{t("about.desc_4")}</p>
 				</div>
 			</motion.main>
 		</>

@@ -1,9 +1,12 @@
 import Lng from "../Lng/Lng";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./Footer.scss";
 
 const Footer = () => {
+	const { t } = useTranslation();
+
 	const restoreScrollToTop = () => {
 		const projectLabels = document.querySelector(".projects__labels-container");
 		const masonry = document.querySelector(".masonry");
@@ -75,7 +78,7 @@ const Footer = () => {
 				<div className="footer__time">{time}</div>
 				<div style={{ textAlign: "end" }}>
 					<button onClick={restoreScrollToTop} className="link-effect">
-						На початок сторінки
+						{t("footer.back_to_top")}
 					</button>
 					<p style={{ marginTop: 15 }}>&copy; 2025 Kristian Yanko</p>
 				</div>

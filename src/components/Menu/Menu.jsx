@@ -1,9 +1,15 @@
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import projectsData from "./../../assets/data/portfolio-data.json";
+import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./Menu.scss";
 
 const Menu = () => {
+	const { t } = useTranslation();
+
+	const { lng } = useParams();
+
 	const inactiveLink = "menu__nav-link link-effect";
 	const activeLink = "menu__nav-link link-effect link-effect--active";
 
@@ -41,28 +47,29 @@ const Menu = () => {
 			<nav className="menu__nav">
 				<NavLink
 					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-					to={"/"}
+					to={`/${lng}/`}
+					end
 				>
-					Головна
+					{t("home_title")}
 				</NavLink>
 				<NavLink
 					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-					to={"/about"}
+					to={`/${lng}/about`}
 				>
-					Про мене
+					{t("about_title")}
 				</NavLink>
 				<NavLink
 					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-					to={"/projects"}
+					to={`/${lng}/projects`}
 				>
-					<span>Проєкти</span>
+					<span> {t("projects_title")}</span>
 					<span className="menu__projects-qty">{projectsData.length}</span>
 				</NavLink>
 				<NavLink
 					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-					to={"/contact"}
+					to={`/${lng}/contact`}
 				>
-					Контакти
+					{t("contact_title")}
 				</NavLink>
 			</nav>
 			<div>

@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import moonIcon from "/icons/moon.png";
 import sunIcon from "/icons/sun.png";
 import "./DarkModeBtn.scss";
 
 const DarkModeBtn = () => {
+	const { t } = useTranslation();
+
 	const [darkMode, setDarkMode] = useState(false);
 
 	const toggleDarkMode = () => {
@@ -19,6 +22,7 @@ const DarkModeBtn = () => {
 		<button onClick={toggleDarkMode} className="dark-mode-btn">
 			{darkMode ? (
 				<img
+					title={t("light")}
 					style={{ display: "block" }}
 					src={sunIcon}
 					width={25}
@@ -27,6 +31,7 @@ const DarkModeBtn = () => {
 				/>
 			) : (
 				<img
+					title={t("dark")}
 					style={{ display: "block" }}
 					src={moonIcon}
 					width={25}

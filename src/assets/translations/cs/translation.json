@@ -1,0 +1,53 @@
+{
+	"home_title": "Ůvod",
+	"about_title": "O mně",
+	"projects_title": "Projekty",
+	"contact_title": "Kontakty",
+	"dark": "Tmavý",
+	"light": "Světlo",
+	"contact_me": "Kontaktujte mě",
+	"view": "Recenze",
+	"residential": "Obytné budovy",
+	"commercial": "Komerční budovy",
+	"tel": "Telefonní číslo",
+
+	"home": {
+		"title": "Navrhování inspirativních prostorů — rezidenční a komerční architektura od Kristian Yanko"
+	},
+
+	"about": {
+		"desc_1": "Jsem architekt z České republiky, specializuji se na návrh rodinných domů a bytových domů. Mým cílem je vytvářet prostory, které kombinují funkčnost, estetiku a udržitelnost.",
+		"desc_2": "Ve své práci se zaměřuji na hluboké pochopení potřeb lidí, kteří budou v těchto prostorách žít. Ať už se jedná o útulný soukromý dům nebo obytný komplex, snažím se vytvořit prostředí, které je nejen vizuálně přitažlivé, ale také praktické, energeticky úsporné a harmonicky integrované do okolní krajiny.",
+		"desc_3": "Od konceptu až po realizaci úzce spolupracuji s klienty, inženýry a dodavateli, abych zajistil, že každý projekt splňuje jasnou vizi, stavební předpisy a přináší dlouhodobou hodnotu.",
+		"desc_4": "Pokud hledáte promyšlená a moderní architektonická řešení pro pohodlný život, pomůžu vám proměnit vaši představu ve skutečnost."
+	},
+
+	"projects": {
+		"all": "Všechny projekty"
+	},
+
+	"project_page": {
+		"need_a_project": "Potřebujete projekt?",
+		"you_may_also_like": "Mohlo by se vám také líbit"
+	},
+
+	"contact": {
+		"email": "E-mail",
+		"follow_me": "Sleduj mě"
+	},
+
+	"contact_form": {
+		"title": "Kontaktní formulář",
+		"info": "Vyplňte formulář a já se vám do 24 hodin ozvou.",
+		"checkbox_title": "Mám zájem o",
+		"checkbox_label_3": "Ostatní",
+		"first_name": "Jméno",
+		"last_name": "Příjmení",
+		"message": "Zpráva",
+		"send": "Poslat"
+	},
+
+	"footer": {
+		"back_to_top": "Na začátek stránky"
+	}
+}

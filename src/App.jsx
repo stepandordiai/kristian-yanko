@@ -1,42 +1,26 @@
-import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-	useLocation,
-} from "react-router-dom";
-import Header from "./components/Header/Header";
+import LngLayout from "./LngLayout";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import getStorage from "./utils/getStorage";
 import { AnimatePresence } from "framer-motion";
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Contact from "./pages/Contact/Contact";
-import ProjectPage from "./pages/ProjectPage/ProjectPage";
-import Projects from "./pages/Projects/Projects";
-import Footer from "./components/Footer/Footer";
-import ScrollToTop from "./utils/ScrollToTop";
-import CustomCursor from "./components/CustomCursor/CustomCursor";
-import ContactMe from "./pages/ContactMe/ContactMe";
+import "./i18next";
 import "./scss/App.scss";
 
 function App() {
 	const location = useLocation();
 
 	return (
-		<>
-			<ScrollToTop />
-			<Header />
-			<AnimatePresence mode="wait">
-				<Routes location={location} key={location.pathname}>
-					<Route path="/" element={<Home />} />
-					<Route path="/about" element={<About />} />
-					<Route path="/projects" element={<Projects />} />
-					<Route path="/contact" element={<Contact />} />
-					<Route path="/project-page/:id" element={<ProjectPage />} />
-					<Route path="/contact-me" element={<ContactMe />} />
-				</Routes>
-			</AnimatePresence>
-			<CustomCursor />
-			<Footer />
-		</>
+		<AnimatePresence mode="wait">
+			<Routes location={location} key={location.pathname}>
+				{/* Redirect from / to default language */}
+				{/* TODO: */}
+				<Route
+					path="/"
+					element={<Navigate to={`/${getStorage()}/`} replace />}
+				/>
+				{/* Wrap all routes in /:lng path */}
+				<Route path="/:lng/*" element={<LngLayout />} />
+			</Routes>
+		</AnimatePresence>
 	);
 }
 

@@ -8,7 +8,10 @@ import {
 	inactiveCursor,
 	removeCursor,
 } from "../../utils/cursorState";
+import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./Projects.scss";
+import { useTranslation } from "react-i18next";
 
 const pageVariants = {
 	initial: { opacity: 0 },
@@ -16,6 +19,10 @@ const pageVariants = {
 	exit: { opacity: 0 },
 };
 const Projects = () => {
+	const { t } = useTranslation();
+
+	const { lng } = useParams();
+
 	const [filter, setFilter] = useState("all");
 
 	const handleFilterBtn = (props) => {
@@ -37,7 +44,7 @@ const Projects = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Kristian Yanko | Projects</title>
+				<title>Kristian Yanko | {t("projects_title")}</title>
 			</Helmet>
 			<motion.main
 				className="projects"
@@ -49,7 +56,7 @@ const Projects = () => {
 			>
 				<div className="projects__title-container">
 					<div className="projects__title-inner">
-						<h1 className="projects__title">Проєкти</h1>
+						<h1 className="projects__title">{t("projects_title")}</h1>
 						<div className="projects__btn-container">
 							<button
 								onClick={() => handleFilterBtn("all")}
@@ -57,7 +64,7 @@ const Projects = () => {
 									filter === "all" ? activeFilterBtn : inactiveFilterBtn
 								}
 							>
-								Всі проєкти
+								{t("projects.all")}
 							</button>
 							<button
 								onClick={() => handleFilterBtn("residential")}
@@ -65,7 +72,7 @@ const Projects = () => {
 									filter === "residential" ? activeFilterBtn : inactiveFilterBtn
 								}
 							>
-								Житлові будинки
+								{t("residential")}
 							</button>
 							<button
 								onClick={() => handleFilterBtn("commercial")}
@@ -73,7 +80,7 @@ const Projects = () => {
 									filter === "commercial" ? activeFilterBtn : inactiveFilterBtn
 								}
 							>
-								Комерційні будинки
+								{t("commercial")}
 							</button>
 						</div>
 					</div>
@@ -115,7 +122,7 @@ const Projects = () => {
 										key={index}
 										className="projects__link"
 										id={index}
-										to={`/project-page/${project.id}`}
+										to={`/${lng}/project-page/${project.id}`}
 									>
 										<img
 											src={project.img[0]}

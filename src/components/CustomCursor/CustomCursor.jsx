@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import isTouchDevice from "../../utils/isTouchDevice";
+import { useTranslation } from "react-i18next";
 import "./CustomCursor.scss";
 
 const CustomCursor = () => {
+	const { t } = useTranslation();
+
 	useEffect(() => {
 		if (isTouchDevice()) return;
 
@@ -15,7 +18,7 @@ const CustomCursor = () => {
 
 		document.addEventListener("mousemove", handleMouseMove);
 	}, []);
-	return <div className="custom-cursor"></div>;
+	return <div className="custom-cursor" data-cursor-value={t("view")}></div>;
 };
 
 export default CustomCursor;
