@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import { useTranslation } from "react-i18next";
 import "./ContactMe.scss";
 
 const pageVariants = {
@@ -10,10 +11,12 @@ const pageVariants = {
 };
 
 const ContactMe = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<Helmet>
-				<title>Kristian Yanko | Зв'яжіться зі мною</title>
+				<title>Kristian Yanko | {t("contact_me")}</title>
 			</Helmet>
 			<motion.main
 				className="contact-me"
@@ -24,7 +27,7 @@ const ContactMe = () => {
 				transition={{ duration: 0.5 }}
 			>
 				<div className="contact__left-container">
-					<h1 className="contact-me__title">Зв'яжіться зі мною</h1>
+					<h1 className="contact-me__title">{t("contact_me")}</h1>
 					<div>
 						<p
 							style={{
@@ -83,19 +86,19 @@ const ContactMe = () => {
 					</div>
 					<div className="contact-me__details-container">
 						<div className="contact__details-container">
-							<p>Номер телефону</p>
+							<p>{t("tel")}</p>
 							<a className="link-effect" href="tel:+420776171400">
 								+420 776 171 400
 							</a>
 						</div>
 						<div className="contact__details-container">
-							<p>Електронна пошта</p>
+							<p>{t("contact.email")}</p>
 							<a className="link-effect" href="mailto:kristian.janko@email.cz">
 								kristian.janko@email.cz
 							</a>
 						</div>
 						<div className="contact__details-container">
-							<p>Слідкуйте за мною</p>
+							<p>{t("contact.follow_me")}</p>
 							<a
 								className="link-effect"
 								href="https://www.instagram.com/kristian.janko"
