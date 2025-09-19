@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import portfolioData from "../../assets/data/portfolio-data.json";
@@ -8,10 +9,9 @@ import {
 	inactiveCursor,
 	removeCursor,
 } from "../../utils/cursorState";
-import { useLocation } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./Projects.scss";
-import { useTranslation } from "react-i18next";
 
 const pageVariants = {
 	initial: { opacity: 0 },
@@ -29,13 +29,6 @@ const Projects = () => {
 		setFilter(props);
 
 		restorateScrollTop();
-	};
-
-	const restorateScrollTop = () => {
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth",
-		});
 	};
 
 	const inactiveFilterBtn = "projects__btn dark--active";
@@ -87,8 +80,7 @@ const Projects = () => {
 				</div>
 				<div className="projects__mansory-container">
 					<div className="projects__labels-container">
-						{portfolioData
-							.slice()
+						{[...portfolioData]
 							.reverse()
 							.filter((project) => filter === "all" || project.type === filter)
 							.map((project, index) => {
@@ -97,20 +89,19 @@ const Projects = () => {
 										<span style={{ fontSize: "0.8rem" }}>
 											{String(project.id).padStart(2, "0")}
 										</span>
-										<a onClick={restorateScrollTop} href={`#${index}`}>
+										<HashLink to={`#${index}`} smooth>
 											<img
 												src={project.img[0]}
 												alt={project.name}
 												loading="lazy"
 											/>
-										</a>
+										</HashLink>
 									</div>
 								);
 							})}
 					</div>
 					<div className="masonry">
-						{portfolioData
-							.slice()
+						{[...portfolioData]
 							.reverse()
 							.filter((project) => filter === "all" || project.type === filter)
 							.map((project, index) => {

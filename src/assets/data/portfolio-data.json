@@ -2,28 +2,28 @@
 	{
 		"id": 1,
 		"name": "Wedding palace Deluxe",
-		"img": ["/02.jpg", "/01.jpg"],
+		"img": ["/project-img/01-c.jpg", "/project-img/02-c.jpg"],
 		"type": "commercial",
 		"year": 2021
 	},
 	{
 		"id": 2,
 		"name": "RD Skorotice – ÚSTÍ NAD LABEM",
-		"img": ["/05.jpg", "/06.jpg"],
+		"img": ["/project-img/03-c.jpg", "/project-img/04-c.jpg"],
 		"type": "residential",
 		"year": 2024
 	},
 	{
 		"id": 3,
 		"name": "RD Vlčnov – CHRUDIM",
-		"img": ["/08.jpg", "/07.jpg"],
+		"img": ["/project-img/05-c.jpg", "/project-img/06-c.jpg"],
 		"type": "residential",
 		"year": 2024
 	},
 	{
 		"id": 4,
 		"name": "RD Kavalírka – PRAHA",
-		"img": ["/04.jpg", "/03.jpg"],
+		"img": ["/project-img/07-c.jpg", "/project-img/08-c.jpg"],
 		"type": "residential",
 		"year": 2024
 	}
