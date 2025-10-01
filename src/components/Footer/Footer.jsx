@@ -63,7 +63,7 @@ const Footer = () => {
 				<div>
 					<Lng />
 					<p style={{ marginTop: 15 }}>
-						Site by{" "}
+						{t("footer.website_created_by")}{" "}
 						<a
 							className="link-effect"
 							href="https://heeeyooo.studio/"

@@ -48,6 +48,7 @@
 	},
 
 	"footer": {
-		"back_to_top": "Na začátek stránky"
+		"back_to_top": "Na začátek stránky",
+		"website_created_by": "Website created by"
 	}
 }
