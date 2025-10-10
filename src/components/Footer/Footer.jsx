@@ -66,7 +66,7 @@ const Footer = () => {
 						{t("footer.website_created_by")}{" "}
 						<a
 							className="link-effect"
-							href="https://heeeyooo.studio/"
+							href="https://www.heeeyooo.studio/"
 							target="_blank"
 						>
 							heeeyooo studio
