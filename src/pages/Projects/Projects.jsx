@@ -37,7 +37,7 @@ const Projects = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Kristian Yanko | {t("projects_title")}</title>
+				<title>{t("projects_title")} | Kristian Yanko</title>
 			</Helmet>
 			<motion.main
 				className="projects"

@@ -1,6 +1,6 @@
+import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
 import "./About.scss";
 
 const pageVariants = {
@@ -15,7 +15,7 @@ const About = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Kristian Yanko | {t("about_title")}</title>
+				<title>{t("about_title")} | Kristian Yanko</title>
 			</Helmet>
 			<motion.main
 				variants={pageVariants}

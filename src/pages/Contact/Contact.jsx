@@ -1,7 +1,7 @@
+import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import ContactForm from "../../components/ContactForm/ContactForm";
-import { useTranslation } from "react-i18next";
 import "./Contact.scss";
 
 const pageVariants = {
@@ -16,7 +16,7 @@ const Contact = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Kristian Yanko | {t("contact_title")}</title>
+				<title>{t("contact_title")} | Kristian Yanko</title>
 			</Helmet>
 			<motion.main
 				className="contact"

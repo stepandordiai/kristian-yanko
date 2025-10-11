@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useParams, NavLink } from "react-router-dom";
 import portfolioData from "./../../assets/data/portfolio-data.json";
@@ -7,7 +8,6 @@ import {
 	inactiveCursor,
 	removeCursor,
 } from "../../utils/cursorState";
-import { useTranslation } from "react-i18next";
 import "./ProjectPage.scss";
 
 const pageVariants = {
@@ -30,7 +30,7 @@ const ProjectPage = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Kristian Yanko | {project.name}</title>
+				<title>{project.name} | Kristian Yanko</title>
 			</Helmet>
 			<motion.div
 				className="project-page"

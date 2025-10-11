@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { NavLink } from "react-router-dom";
 import portfolioData from "./../../assets/data/portfolio-data.json";
@@ -9,7 +10,6 @@ import {
 	removeCursor,
 } from "../../utils/cursorState";
 import { useParams } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import "./Home.scss";
 
 const pageVariants = {
@@ -49,7 +49,7 @@ const Home = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Kristian Yanko | {t("home.title")}</title>
+				<title>{t("home.title")} | Kristian Yanko</title>
 			</Helmet>
 			<motion.main
 				className="home"
