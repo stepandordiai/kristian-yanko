@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
 import { useParams, NavLink } from "react-router-dom";
-import portfolioData from "./../../assets/data/portfolio-data.json";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import portfolioData from "./../../assets/data/portfolio-data.json";
 import {
 	activeCursor,
 	inactiveCursor,

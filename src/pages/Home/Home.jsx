@@ -1,15 +1,15 @@
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
-import { NavLink } from "react-router-dom";
-import portfolioData from "./../../assets/data/portfolio-data.json";
+import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import portfolioData from "./../../assets/data/portfolio-data.json";
+import { NavLink } from "react-router-dom";
 import {
 	activeCursor,
 	inactiveCursor,
 	removeCursor,
 } from "../../utils/cursorState";
-import { useParams } from "react-router-dom";
 import "./Home.scss";
 
 const pageVariants = {

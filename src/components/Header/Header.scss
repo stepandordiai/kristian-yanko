@@ -90,6 +90,88 @@
 	grid-template-rows: 1fr;
 }
 
+// menu-btn
+
+.menu-btn {
+	position: relative;
+	display: none;
+	width: 25px;
+	aspect-ratio: 1/1;
+	transition: all 0.5s;
+}
+
+.menu-btn::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 100%;
+	width: 2px;
+	background: #000;
+}
+
+.menu-btn::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 2px;
+	width: 100%;
+	background: #000;
+}
+
+.menu-btn--active {
+	transform: rotate(135deg);
+}
+
+// menu
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 15px;
+	overflow: hidden;
+}
+
+.menu__nav {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+}
+
+.menu__nav-link {
+	font-size: 1.25rem;
+	color: #000;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.25s;
+}
+
+.menu__nav-link--active {
+	opacity: 1;
+	pointer-events: all;
+	transition: opacity 0.5s;
+}
+
+.menu__projects-qty {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(125%, -25%);
+	font-size: 0.8rem;
+}
+
+@media screen and (width < 896px) {
+	.menu-btn {
+		display: initial;
+	}
+}
+
 @media screen and (width <= 896px) {
 	.header {
 		padding: 0 15px;

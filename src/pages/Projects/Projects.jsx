@@ -1,16 +1,16 @@
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
+import { useParams } from "react-router-dom";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import portfolioData from "../../assets/data/portfolio-data.json";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import {
 	activeCursor,
 	inactiveCursor,
 	removeCursor,
 } from "../../utils/cursorState";
-import { useParams } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 import "./Projects.scss";
 
 const pageVariants = {
@@ -18,21 +18,13 @@ const pageVariants = {
 	animate: { opacity: 1 },
 	exit: { opacity: 0 },
 };
+
 const Projects = () => {
 	const { t } = useTranslation();
 
 	const { lng } = useParams();
 
 	const [filter, setFilter] = useState("all");
-
-	const handleFilterBtn = (props) => {
-		setFilter(props);
-
-		restorateScrollTop();
-	};
-
-	const inactiveFilterBtn = "projects__btn dark--active";
-	const activeFilterBtn = "projects__btn projects__btn--active dark--active";
 
 	return (
 		<>
@@ -52,26 +44,26 @@ const Projects = () => {
 						<h1 className="projects__title">{t("projects_title")}</h1>
 						<div className="projects__btn-container">
 							<button
-								onClick={() => handleFilterBtn("all")}
-								className={
-									filter === "all" ? activeFilterBtn : inactiveFilterBtn
-								}
+								onClick={() => setFilter("all")}
+								className={`projects__btn dark--active ${
+									filter === "all" ? "projects__btn--active" : ""
+								}`}
 							>
 								{t("projects.all")}
 							</button>
 							<button
-								onClick={() => handleFilterBtn("residential")}
-								className={
-									filter === "residential" ? activeFilterBtn : inactiveFilterBtn
-								}
+								onClick={() => setFilter("residential")}
+								className={`projects__btn dark--active ${
+									filter === "residential" ? "projects__btn--active" : ""
+								}`}
 							>
 								{t("residential")}
 							</button>
 							<button
-								onClick={() => handleFilterBtn("commercial")}
-								className={
-									filter === "commercial" ? activeFilterBtn : inactiveFilterBtn
-								}
+								onClick={() => setFilter("commercial")}
+								className={`projects__btn dark--active ${
+									filter === "commercial" ? "projects__btn--active" : ""
+								}`}
 							>
 								{t("commercial")}
 							</button>
@@ -82,7 +74,7 @@ const Projects = () => {
 					<div className="projects__labels-container">
 						{[...portfolioData]
 							.reverse()
-							.filter((project) => filter === "all" || project.type === filter)
+							.filter((project) => filter === "all" || filter === project.type)
 							.map((project, index) => {
 								return (
 									<div key={index} className="projects__label-container">
@@ -103,7 +95,7 @@ const Projects = () => {
 					<div className="masonry">
 						{[...portfolioData]
 							.reverse()
-							.filter((project) => filter === "all" || project.type === filter)
+							.filter((project) => filter === "all" || filter === project.type)
 							.map((project, index) => {
 								return (
 									<NavLink

@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useState, useEffect } from "react";
 import moonIcon from "/icons/moon.png";
 import sunIcon from "/icons/sun.png";
 import "./DarkModeBtn.scss";
@@ -10,7 +10,7 @@ const DarkModeBtn = () => {
 	const [darkMode, setDarkMode] = useState(false);
 
 	const toggleDarkMode = () => {
-		setDarkMode(!darkMode);
+		setDarkMode((prev) => !prev);
 	};
 
 	useEffect(() => {

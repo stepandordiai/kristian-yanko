@@ -1,9 +1,10 @@
 import { useParams, useLocation, useNavigate } from "react-router-dom";
-import i18n from "i18next";
 import { useEffect } from "react";
+import i18n from "i18next";
 import "./Lng.scss";
 
 const Lng = () => {
+	// TODO: FIX
 	const { lng } = useParams(); // current language from URL
 	const location = useLocation(); // full path
 	const navigate = useNavigate();
@@ -26,21 +27,22 @@ const Lng = () => {
 		navigate(newPath + location.search, { replace: true });
 	};
 
-	const inactiveLngBtn = "lng__btn--active link-effect";
-	const activeLngBtn = "lng__btn--active link-effect link-effect--active";
-
 	return (
 		<div>
 			<button
 				onClick={() => handleLanguage("cs")}
-				className={lng === "cs" ? activeLngBtn : inactiveLngBtn}
+				className={`lng__btn--active link-effect ${
+					lng === "cs" ? "link-effect--active" : ""
+				}`}
 			>
 				CZ
 			</button>
 			<span> | </span>
 			<button
 				onClick={() => handleLanguage("uk")}
-				className={lng === "uk" ? activeLngBtn : inactiveLngBtn}
+				className={`lng__btn--active link-effect ${
+					lng === "uk" ? "link-effect--active" : ""
+				}`}
 			>
 				UA
 			</button>

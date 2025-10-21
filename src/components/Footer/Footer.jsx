@@ -1,13 +1,14 @@
-import Lng from "../Lng/Lng";
-import dayjs from "dayjs";
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import dayjs from "dayjs";
+import Lng from "../Lng/Lng";
 import "./Footer.scss";
 
 const Footer = () => {
 	const { t } = useTranslation();
 
 	const restoreScrollToTop = () => {
+		// TODO: FIX
 		const projectLabels = document.querySelector(".projects__labels-container");
 		const masonry = document.querySelector(".masonry");
 
@@ -63,7 +64,7 @@ const Footer = () => {
 				<div>
 					<Lng />
 					<p style={{ marginTop: 15 }}>
-						{t("footer.website_created_by")}{" "}
+						Website created by{" "}
 						<a
 							className="link-effect"
 							href="https://www.heeeyooo.studio/"
