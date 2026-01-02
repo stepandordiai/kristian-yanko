@@ -3,43 +3,8 @@
 .footer {
 	margin-top: auto;
 	@include flex-between-end;
+	gap: 15px;
+	flex-wrap: wrap;
 	padding: 15px;
 	border-top: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.footer__left-container {
-	display: flex;
-	flex-direction: row-reverse;
-	align-items: flex-end;
-	gap: 15px;
-	justify-content: space-between;
-}
-
-.footer__right-container {
-	display: flex;
-	align-items: flex-end;
-	gap: 15px;
-}
-
-@keyframes animateColon {
-	0% {
-		opacity: 1;
-	}
-	50% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@media screen and (width < 808px) {
-	.footer__left-container {
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	.footer__right-container {
-		flex-direction: column;
-	}
 }

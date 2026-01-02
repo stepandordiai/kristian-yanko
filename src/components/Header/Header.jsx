@@ -103,6 +103,7 @@ const Header = () => {
 						{navLinksData.map((navLink) => {
 							return (
 								<NavLink
+									key={navLink.id}
 									onClick={() => setMenuOpen(false)}
 									className={({ isActive }) =>
 										`menu__nav-link link-effect ${
